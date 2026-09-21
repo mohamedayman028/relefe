@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RELIEF — A premium cafe experience. Specialty coffee, handcrafted cheesecakes, artisan waffles and unforgettable desserts." />
+  <meta property="og:title" content="RELIEF — Premium Cafe Menu" />
+  <title>RELIEF — Premium Cafe | Coffee, Desserts & Moments</title>
+  <!-- External Libraries: FontAwesome v6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ── Cursor ─────────────────────────────────────────────── -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ── Loader ─────────────────────────────────────────────── -->
+<div id="loader">
+  <div class="loader-logo">RELIEF</div>
+  <div class="loader-rule"></div>
+  <div class="loader-tagline">Coffee · Desserts · Moments</div>
+  <div class="loader-progress"><div class="loader-progress-fill"></div></div>
+</div>
+
+<!-- ── Mobile Menu ────────────────────────────────────────── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileClose">✕</button>
+  <a href="#hero"      class="mobile-nav-link">Home</a>
+  <a href="#story"     class="mobile-nav-link">Our Story</a>
+  <a href="#signature" class="mobile-nav-link">Signature</a>
+  <a href="#menu"      class="mobile-nav-link">Menu</a>
+</div>
+
+<!-- ── Navigation ─────────────────────────────────────────── -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">RELIEF</a>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#signature">Signature</a></li>
+    <li><a href="#menu">Menu</a></li>
+  </ul>
+  <div class="nav-hours">Open daily &nbsp;<span>7AM – 1AM</span></div>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════ HERO ═════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-img-bg"></div>
+  <div class="hero-vignette"></div>
+
+  <!-- Floating Coffee Beans -->
+  <div class="bean" style="left:6%;  width:11px;height:17px; --dur:14s; --dl:0s;"></div>
+  <div class="bean" style="left:17%; width:15px;height:21px; --dur:11s; --dl:2.2s;"></div>
+  <div class="bean" style="left:29%; width:9px; height:14px; --dur:16s; --dl:1s;"></div>
+  <div class="bean" style="left:53%; width:13px;height:19px; --dur:13s; --dl:3.1s;"></div>
+  <div class="bean" style="left:68%; width:10px;height:16px; --dur:10s; --dl:0.7s;"></div>
+  <div class="bean" style="left:79%; width:17px;height:24px; --dur:15s; --dl:4.2s;"></div>
+  <div class="bean" style="left:88%; width:9px; height:14px; --dur:12s; --dl:1.8s;"></div>
+  <div class="bean" style="left:44%; width:12px;height:18px; --dur:17s; --dl:2.7s;"></div>
+
+  <div class="hero-content">
+    <p class="hero-est">Est. 2020 — Premium Cafe Experience</p>
+    <h1 class="hero-title">RELIEF</h1>
+    <div class="hero-rule">
+      <div class="hero-rule-line"></div>
+      <div class="hero-rule-diamond"></div>
+      <div class="hero-rule-line"></div>
+    </div>
+    <p class="hero-sub">Coffee &nbsp;·&nbsp; Desserts &nbsp;·&nbsp; Moments</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn-ghost">
+        <span>Explore Menu</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-track"><div class="scroll-thumb"></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ MARQUEE BAND ════════ -->
+<div class="marquee-band">
+  <div class="marquee-track" id="marqueeTrack">
+    <!-- duplicated for seamless loop -->
+    <div class="marquee-item"><span class="dot"></span> Specialty Coffee</div>
+    <div class="marquee-item"><span class="dot"></span> Artisan Cheesecake</div>
+    <div class="marquee-item"><span class="dot"></span> Belgian Waffles</div>
+    <div class="marquee-item"><span class="dot"></span> Iced Drinks</div>
+    <div class="marquee-item"><span class="dot"></span> Premium Desserts</div>
+    <div class="marquee-item"><span class="dot"></span> Freshly Baked</div>
+    <div class="marquee-item"><span class="dot"></span> Riyadh · Saudi Arabia</div>
+    <div class="marquee-item"><span class="dot"></span> Est. 2020</div>
+    <div class="marquee-item"><span class="dot"></span> Specialty Coffee</div>
+    <div class="marquee-item"><span class="dot"></span> Artisan Cheesecake</div>
+    <div class="marquee-item"><span class="dot"></span> Belgian Waffles</div>
+    <div class="marquee-item"><span class="dot"></span> Iced Drinks</div>
+    <div class="marquee-item"><span class="dot"></span> Premium Desserts</div>
+    <div class="marquee-item"><span class="dot"></span> Freshly Baked</div>
+    <div class="marquee-item"><span class="dot"></span> Riyadh · Saudi Arabia</div>
+    <div class="marquee-item"><span class="dot"></span> Est. 2020</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ STORY ═══════════ -->
+<section id="story">
+  <div class="container">
+    <div class="story-grid">
+
+      <!-- Image -->
+      <div class="story-visual reveal-l">
+        <div class="story-img-frame">
+          <img src="about_cafe.png" alt="RELIEF Cafe Interior" loading="lazy" width="600" height="800" />
+        </div>
+        <div class="story-frame-border"></div>
+        <div class="story-badge">
+          <span class="story-badge-n">5★</span>
+          <span class="story-badge-l">Rated</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="story-text reveal-r">
+        <div class="section-eyebrow">Our Story</div>
+        <h2 class="story-heading">Born from a <em>passion</em><br>for perfection</h2>
+        <p class="story-body">
+          Relief was born from a simple idea: creating a place where people can slow down, relax, and enjoy exceptional coffee and handcrafted desserts. Every cup is prepared with passion, every detail designed to create comfort. We source our beans from the finest farms in Ethiopia and Colombia, roasted to perfection to deliver that unforgettable cup that becomes your daily ritual.
+        </p>
+
+        <div class="story-stats">
+          <div><span class="stat-n" data-target="15000">0</span><span class="stat-l">Happy Guests</span></div>
+          <div><span class="stat-n" data-target="48">0</span><span class="stat-l">Menu Items</span></div>
+          <div><span class="stat-n" data-target="6">0</span><span class="stat-l">Years of Craft</span></div>
+        </div>
+
+        <!-- Interactive Timeline -->
+        <div class="timeline">
+          <div class="timeline-spine"></div>
+          <div class="timeline-items">
+
+            <div class="tl-item active" onclick="activateTL(this)">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2020</div>
+              <div class="tl-title">The Beginning</div>
+              <div class="tl-body">Relief opened its first location with a simple dream — to elevate everyday coffee into an art form, one cup at a time.</div>
+            </div>
+
+            <div class="tl-item" onclick="activateTL(this)">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2022</div>
+              <div class="tl-title">The Dessert Chapter</div>
+              <div class="tl-body">Introduced our signature cheesecake line and handcrafted waffles, transforming Relief into the city's most beloved dessert destination.</div>
+            </div>
+
+            <div class="tl-item" onclick="activateTL(this)">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2023</div>
+              <div class="tl-title">Signature Collection</div>
+              <div class="tl-body">Launched our exclusive Signature Drinks menu — cold brews, specialty pours, and seasonal creations that became instant icons.</div>
+            </div>
+
+            <div class="tl-item" onclick="activateTL(this)">
+              <div class="tl-dot"></div>
+              <div class="tl-year">2024</div>
+              <div class="tl-title">Recognition & Community</div>
+              <div class="tl-body">Voted Best Specialty Cafe by over 15,000 guests. What began as a vision became a family — and we're just getting started.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════ SIGNATURE DRINKS ══════════ -->
+<section id="signature">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">Crafted to Impress</div>
+      <h2 class="section-title">Our <em>Signature</em> Collection</h2>
+      <p class="section-desc">Three expressions of coffee mastery — each a distinct mood, each an unforgettable experience.</p>
+    </div>
+  </div>
+
+  <div class="sig-grid container reveal-s">
+
+    <div class="sig-card">
+      <img src="espresso.png" alt="Signature Espresso" class="sig-img" loading="lazy" width="400" height="533" />
+      <div class="sig-info">
+        <div class="sig-label">Morning Ritual</div>
+        <div class="sig-name">The Black<br>Espresso</div>
+        <div class="sig-tags">
+          <span class="sig-tag">Ethiopian Blend</span>
+          <span class="sig-tag">Single Origin</span>
+          <span class="sig-tag">Bold</span>
+        </div>
+        <div class="sig-price-row">
+          <div class="sig-price-item">
+            <span class="sig-price-size">Single</span>
+            <span class="sig-price-val">55 EGP</span>
+          </div>
+          <div class="sig-price-item">
+            <span class="sig-price-size">Double</span>
+            <span class="sig-price-val">65 EGP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sig-card">
+      <img src="hero_coffee.png" alt="Signature Cappuccino" class="sig-img" loading="lazy" width="400" height="533" />
+      <div class="sig-info">
+        <div class="sig-label">The Classic</div>
+        <div class="sig-name">Velvet<br>Cappuccino</div>
+        <div class="sig-tags">
+          <span class="sig-tag">Micro Foam</span>
+          <span class="sig-tag">Latte Art</span>
+          <span class="sig-tag">Smooth</span>
+        </div>
+        <div class="sig-price-row">
+          <div class="sig-price-item">
+            <span class="sig-price-size">Small</span>
+            <span class="sig-price-val">73 EGP</span>
+          </div>
+          <div class="sig-price-item">
+            <span class="sig-price-size">Medium</span>
+            <span class="sig-price-val">80 EGP</span>
+          </div>
+          <div class="sig-price-item">
+            <span class="sig-price-size">Large</span>
+            <span class="sig-price-val">90 EGP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sig-card">
+      <img src="iced_latte.png" alt="Signature Iced Spanish Latte" class="sig-img" loading="lazy" width="400" height="533" />
+      <div class="sig-info">
+        <div class="sig-label">Summer Icon</div>
+        <div class="sig-name">Iced Spanish<br>Latte</div>
+        <div class="sig-tags">
+          <span class="sig-tag">Condensed Milk</span>
+          <span class="sig-tag">Double Shot</span>
+          <span class="sig-tag">Refreshing</span>
+        </div>
+        <div class="sig-price-row">
+          <div class="sig-price-item">
+            <span class="sig-price-size">Regular</span>
+            <span class="sig-price-val">95 EGP</span>
+          </div>
+          <div class="sig-price-item">
+            <span class="sig-price-size">Large</span>
+            <span class="sig-price-val">110 EGP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ════════════════════════════════ STATS BAND ═════════════ -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-block reveal"><span class="stat-num" data-target="15000">0</span><span class="stat-lbl">Happy Guests</span></div>
+      <div class="stat-block reveal" data-delay="100"><span class="stat-num" data-target="48">0</span><span class="stat-lbl">Menu Items</span></div>
+      <div class="stat-block reveal" data-delay="200"><span class="stat-num" data-target="99">0</span><span class="stat-lbl">% Satisfaction</span></div>
+      <div class="stat-block reveal" data-delay="300"><span class="stat-num" data-target="6">0</span><span class="stat-lbl">Years of Craft</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════ MENU ════════════ -->
+<section id="menu">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom: 24px;">
+      <div class="section-eyebrow">Our Menu</div>
+    </div>
+
+    <!-- 3D Ring / Coverflow Category Carousel -->
+    <div class="cat-carousel-3d" id="catCarousel3D" aria-label="Category Navigation">
+      <button class="cat-carousel-nav cat-nav-prev" id="catNavPrev" aria-label="Previous Category">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <div class="cat-carousel-stage" id="catCarouselStage">
+        <div class="cat-ring-track" id="catRingTrack">
+
+          <div class="cat-ring-card active" id="tab-coffee" data-tab="coffee" data-index="0">
+            <div class="cat-glass-badge badge-amber">
+              <span class="cat-icon">☕</span>
+            </div>
+            <div class="cat-card-content">
+              <span class="cat-card-title">Hot Coffee</span>
+              <span class="cat-card-count">18 Items</span>
+            </div>
+          </div>
+
+          <div class="cat-ring-card" id="tab-iced" data-tab="iced" data-index="1">
+            <div class="cat-glass-badge badge-cyan">
+              <span class="cat-icon">🥤</span>
+            </div>
+            <div class="cat-card-content">
+              <span class="cat-card-title">Iced Drinks</span>
+              <span class="cat-card-count">12 Items</span>
+            </div>
+          </div>
+
+          <div class="cat-ring-card" id="tab-desserts" data-tab="desserts" data-index="2">
+            <div class="cat-glass-badge badge-rose">
+              <span class="cat-icon">🍰</span>
+            </div>
+            <div class="cat-card-content">
+              <span class="cat-card-title">Desserts</span>
+              <span class="cat-card-count">10 Items</span>
+            </div>
+          </div>
+
+          <div class="cat-ring-card" id="tab-waffles" data-tab="waffles" data-index="3">
+            <div class="cat-glass-badge badge-gold">
+              <span class="cat-icon">🧇</span>
+            </div>
+            <div class="cat-card-content">
+              <span class="cat-card-title">Waffles</span>
+              <span class="cat-card-count">6 Items</span>
+            </div>
+          </div>
+
+          <div class="cat-ring-card" id="tab-bakery" data-tab="bakery" data-index="4">
+            <div class="cat-glass-badge badge-caramel">
+              <span class="cat-icon">🥐</span>
+            </div>
+            <div class="cat-card-content">
+              <span class="cat-card-title">Bakery</span>
+              <span class="cat-card-count">8 Items</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="cat-carousel-nav cat-nav-next" id="catNavNext" aria-label="Next Category">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Coffee Panel ─────────────────────────────────────── -->
+  <div class="menu-panel active" id="panel-coffee">
+    <div class="container">
+      <div class="panel-head">
+        <span class="panel-head-label">Hot Beverages</span>
+        <h3 class="panel-head-title">Specialty <em>Coffee</em></h3>
+      </div>
+      <div class="menu-v-grid">
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <img src="espresso.png" alt="Espresso" loading="lazy" width="400" height="300" />
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Signature</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Espresso</div>
+          <div class="card-tags">
+            <span class="card-tag">Ethiopian Blend</span>
+            <span class="card-tag">Bold</span>
+            <span class="card-tag">Single Origin</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Single</span>
+              <span class="price-val"><span class="price-unit">EGP </span>55</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Double</span>
+              <span class="price-val"><span class="price-unit">EGP </span>65</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <img src="hero_coffee.png" alt="Cappuccino" loading="lazy" width="400" height="300" />
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Cappuccino</div>
+          <div class="card-tags">
+            <span class="card-tag">Micro Foam</span>
+            <span class="card-tag">Latte Art</span>
+            <span class="card-tag">Classic</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Small</span>
+              <span class="price-val"><span class="price-unit">EGP </span>73</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>80</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>90</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">☕</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Hot Latte</div>
+          <div class="card-tags">
+            <span class="card-tag">Steamed Milk</span>
+            <span class="card-tag">Smooth</span>
+            <span class="card-tag">Comforting</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Small</span>
+              <span class="price-val"><span class="price-unit">EGP </span>73</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>80</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>90</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🤍</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Best Seller</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Flat White</div>
+          <div class="card-tags">
+            <span class="card-tag">Double Ristretto</span>
+            <span class="card-tag">Velvety</span>
+            <span class="card-tag">Intense</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Small</span>
+              <span class="price-val"><span class="price-unit">EGP </span>75</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>85</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🍫</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Hot Mocha</div>
+          <div class="card-tags">
+            <span class="card-tag">Belgian Chocolate</span>
+            <span class="card-tag">Indulgent</span>
+            <span class="card-tag">Rich</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Small</span>
+              <span class="price-val"><span class="price-unit">EGP </span>85</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>95</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>105</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="coffee">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">☕</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Single Origin</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">V60 Pour Over</div>
+          <div class="card-tags">
+            <span class="card-tag">Filter Coffee</span>
+            <span class="card-tag">Fruity Notes</span>
+            <span class="card-tag">Clean</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Hot</span>
+              <span class="price-val"><span class="price-unit">EGP </span>85</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Iced</span>
+              <span class="price-val"><span class="price-unit">EGP </span>95</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" onclick="openCategoryModal('coffee')">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🤎</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Cortado</div>
+          <div class="card-tags">
+            <span class="card-tag">Equal Parts</span>
+            <span class="card-tag">Espresso & Milk</span>
+            <span class="card-tag">Balanced</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Standard</span>
+              <span class="price-val"><span class="price-unit">EGP </span>24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Iced Panel ──────────────────────────────────────── -->
+  <div class="menu-panel" id="panel-iced">
+    <div class="container">
+      <div class="panel-head">
+        <span class="panel-head-label">Cold Beverages</span>
+        <h3 class="panel-head-title"><em>Iced</em> Drinks</h3>
+      </div>
+      <div class="menu-v-grid">
+
+      <div class="menu-card" data-action="open-category" data-cat="iced">
+        <div class="card-img-wrap">
+          <img src="iced_latte.png" alt="Iced Latte" loading="lazy" width="400" height="300" />
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Popular</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Iced Latte</div>
+          <div class="card-tags">
+            <span class="card-tag">Cold Milk</span>
+            <span class="card-tag">Double Shot</span>
+            <span class="card-tag">Refreshing</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>75</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>85</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="iced">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-iced">🥛</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Signature</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Iced Spanish Latte</div>
+          <div class="card-tags">
+            <span class="card-tag">Condensed Milk</span>
+            <span class="card-tag">Sweet</span>
+            <span class="card-tag">Layered</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>95</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>110</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="iced">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-iced">🍫</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Iced Mocha</div>
+          <div class="card-tags">
+            <span class="card-tag">Dark Chocolate</span>
+            <span class="card-tag">Iced</span>
+            <span class="card-tag">Intense</span>
+          </div>
+          <div class="card-prices">
+            <div class="price-col">
+              <span class="price-size">Medium</span>
+              <span class="price-val"><span class="price-unit">EGP </span>85</span>
+            </div>
+            <div class="price-col">
+              <span class="price-size">Large</span>
+              <span class="price-val"><span class="price-unit">EGP </span>95</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Desserts Panel ─────────────────────────────────── -->
+  <div class="menu-panel" id="panel-desserts">
+    <div class="container">
+      <div class="panel-head">
+        <span class="panel-head-label">Handcrafted Sweets</span>
+        <h3 class="panel-head-title"><em>Desserts</em> & Cheesecake</h3>
+      </div>
+      <div class="menu-v-grid">
+
+      <div class="menu-card" data-action="open-category" data-cat="cheesecake">
+        <div class="card-img-wrap">
+          <img src="lotus_cheesecake.png" alt="Lotus Cheesecake" loading="lazy" width="400" height="300" />
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Fan Favourite</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Lotus Cheesecake</div>
+          <div class="card-tags">
+            <span class="card-tag">Biscoff Crust</span>
+            <span class="card-tag">Caramel Drizzle</span>
+            <span class="card-tag">Creamy</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>35</div>
+            <div class="price-note">Per slice</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="cheesecake">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-cake">🔥</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Chef's Pick</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">San Sebastian</div>
+          <div class="card-tags">
+            <span class="card-tag">Burnt Basque</span>
+            <span class="card-tag">Caramelized Top</span>
+            <span class="card-tag">Silky</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>38</div>
+            <div class="price-note">Per slice</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="cheesecake">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-cake">🍫</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Chocolate Cheesecake</div>
+          <div class="card-tags">
+            <span class="card-tag">Dark Chocolate</span>
+            <span class="card-tag">Ganache Glaze</span>
+            <span class="card-tag">Decadent</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>36</div>
+            <div class="price-note">Per slice</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="desserts">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-cake">❤️</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Red Velvet Cake</div>
+          <div class="card-tags">
+            <span class="card-tag">Cream Cheese Frosting</span>
+            <span class="card-tag">Moist</span>
+            <span class="card-tag">Elegant</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>34</div>
+            <div class="price-note">Per slice</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="desserts">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-cake">🍯</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Signature</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Russian Honey Cake</div>
+          <div class="card-tags">
+            <span class="card-tag">Medovik</span>
+            <span class="card-tag">Caramelized Honey</span>
+            <span class="card-tag">Layered</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>40</div>
+            <div class="price-note">Per slice</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Waffles Panel ─────────────────────────────────── -->
+  <div class="menu-panel" id="panel-waffles">
+    <div class="container">
+      <div class="panel-head">
+        <span class="panel-head-label">Freshly Made</span>
+        <h3 class="panel-head-title">Artisan <em>Waffles</em></h3>
+      </div>
+      <div class="menu-v-grid">
+
+      <div class="menu-card" data-action="open-category" data-cat="waffles">
+        <div class="card-img-wrap">
+          <img src="waffle.png" alt="Nutella Waffle" loading="lazy" width="400" height="300" />
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Best Seller</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Nutella Waffle</div>
+          <div class="card-tags">
+            <span class="card-tag">Belgian Crisp</span>
+            <span class="card-tag">Fresh Strawberries</span>
+            <span class="card-tag">Powdered Sugar</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>28</div>
+            <div class="price-note">Full portion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="waffles">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-waffle">🍪</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">New</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Lotus Waffle</div>
+          <div class="card-tags">
+            <span class="card-tag">Biscoff Spread</span>
+            <span class="card-tag">Caramel Drizzle</span>
+            <span class="card-tag">Crunchy</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>30</div>
+            <div class="price-note">Full portion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="waffles">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-waffle">🍓</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Mixed Fruits Waffle</div>
+          <div class="card-tags">
+            <span class="card-tag">Seasonal Fruits</span>
+            <span class="card-tag">Honey Drizzle</span>
+            <span class="card-tag">Whipped Cream</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>28</div>
+            <div class="price-note">Full portion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="waffles">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-waffle">🥞</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Classic</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Fluffy Pancakes</div>
+          <div class="card-tags">
+            <span class="card-tag">Maple Syrup</span>
+            <span class="card-tag">Butter</span>
+            <span class="card-tag">Soft</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>35</div>
+            <div class="price-note">Stack of 3</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Bakery Panel ─────────────────────────────────── -->
+  <div class="menu-panel" id="panel-bakery">
+    <div class="container">
+      <div class="panel-head">
+        <span class="panel-head-label">Daily Oven</span>
+        <h3 class="panel-head-title">Fresh <em>Bakery</em></h3>
+      </div>
+      <div class="menu-v-grid">
+
+      <div class="menu-card" data-action="open-category" data-cat="bakery">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🥐</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Fresh Daily</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Butter Croissant</div>
+          <div class="card-tags">
+            <span class="card-tag">French Butter</span>
+            <span class="card-tag">Flaky</span>
+            <span class="card-tag">Fresh Daily</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>16</div>
+            <div class="price-note">Per piece</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="bakery">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🥐</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Almond Croissant</div>
+          <div class="card-tags">
+            <span class="card-tag">Almond Cream</span>
+            <span class="card-tag">Toasted Almonds</span>
+            <span class="card-tag">Sweet</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>22</div>
+            <div class="price-note">Per piece</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="bakery">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🍫</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Pain au Chocolat</div>
+          <div class="card-tags">
+            <span class="card-tag">Dark Chocolate</span>
+            <span class="card-tag">Flaky Layers</span>
+            <span class="card-tag">Classic</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>20</div>
+            <div class="price-note">Per piece</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="bakery">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🌀</div>
+          <div class="card-img-overlay"></div>
+          <div class="card-badge">Best Seller</div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Cinnamon Roll</div>
+          <div class="card-tags">
+            <span class="card-tag">Cinnamon Sugar</span>
+            <span class="card-tag">Cream Cheese Glaze</span>
+            <span class="card-tag">Soft</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>24</div>
+            <div class="price-note">Per piece</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card" data-action="open-category" data-cat="bakery">
+        <div class="card-img-wrap">
+          <div class="card-placeholder ph-coffee">🧀</div>
+          <div class="card-img-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div class="card-name">Cheese Danish</div>
+          <div class="card-tags">
+            <span class="card-tag">Savory Cheese</span>
+            <span class="card-tag">Puff Pastry</span>
+            <span class="card-tag">Warm</span>
+          </div>
+          <div class="card-price-single">
+            <div class="price-main"><span class="price-unit">EGP </span>18</div>
+            <div class="price-note">Per piece</div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════ PARALLAX BANNER ═════════════ -->
+<div class="parallax-banner" id="parallaxBanner">
+  <div class="pb-bg" id="pbBg"></div>
+  <div class="pb-overlay"></div>
+  <div class="pb-content reveal-s">
+    <p class="pb-quote">"Every cup we serve is a small act of love — brewed with intention, poured with care."</p>
+    <p class="pb-attr">— The Relief Team</p>
+  </div>
+</div>
+
+
+
+
+
+<!-- ══════════════════════════════ CATEGORY MODAL / SLIDE-UP DRAWER ══════════ -->
+<div class="cat-modal-overlay" id="catModalOverlay" role="dialog" aria-modal="true" aria-labelledby="catModalTitle">
+  <div class="cat-modal" id="catModal">
+    <div class="cat-modal-handle-bar">
+      <div class="cat-modal-handle"></div>
+    </div>
+    <div class="cat-modal-header">
+      <div class="cat-modal-head-left">
+        <div class="cat-modal-eyebrow" id="catModalEyebrow">Menu Category</div>
+        <h2 class="cat-modal-title" id="catModalTitle">Category Name</h2>
+      </div>
+      <div class="cat-modal-tabs-wrapper" id="catModalTabsWrapper">
+        <div class="cat-modal-tabs" id="catModalTabs">
+          <button class="cat-modal-tab-btn" data-cat="coffee">☕ Hot Coffee</button>
+          <button class="cat-modal-tab-btn" data-cat="iced">🥤 Iced</button>
+          <button class="cat-modal-tab-btn" data-cat="cheesecake">🍰 Cheesecake</button>
+          <button class="cat-modal-tab-btn" data-cat="waffles">🧇 Waffles</button>
+          <button class="cat-modal-tab-btn" data-cat="desserts">🍫 Desserts</button>
+          <button class="cat-modal-tab-btn" data-cat="bakery">🥐 Bakery</button>
+        </div>
+      </div>
+      <button class="cat-modal-close" id="catModalClose" aria-label="Close category drawer">✕</button>
+    </div>
+    <div class="cat-modal-body" id="catModalBody">
+      <!-- Populated dynamically by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════ PAGE END ═══════════ -->
+<div class="page-end">
+  <div class="page-end-logo">RELIEF</div>
+  <div class="page-end-rule"></div>
+  <p class="page-end-copy">© 2024 Relief. All rights reserved. &nbsp;·&nbsp; Coffee · Desserts · Moments</p>
+</div>
+
+
+
+<button id="back-top" aria-label="Back to top">↑</button>
+<script src="app.js"></script>
+</body>
+</html>
