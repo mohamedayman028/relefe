@@ -2,6 +2,7 @@
    RELIEF CAFE — Premium Digital Menu Script v2
    ============================================================ */
 
+
 'use strict';
 
 /* ── Loader ───────────────────────────────────────────────── */
@@ -54,7 +55,7 @@ document.addEventListener('mouseleave', () => {
 
 // Cursor expand hover effect on interactive elements via event delegation
 document.addEventListener('mouseover', e => {
-  const target = e.target.closest('a, button, .cat-pill, .menu-card, .sig-card, .offer-card, .g-item, .review-card, .soc-btn, .menu-tab-btn, .rv-btn');
+  const target = e.target.closest('a, button, .cat-pill, .sig-card, .offer-card, .g-item, .review-card, .soc-btn, .menu-tab-btn, .rv-btn');
   if (target) {
     document.body.classList.add('cursor-expand');
   } else {
@@ -392,8 +393,8 @@ function initCategorySwiper() {
 window.initCategorySwiper = initCategorySwiper;
 
 
-/* ── Category Modal Data & Interaction ───────────────────────── */
-const categoryData = {
+/* ── Category Modal Data & Interaction — REMOVED (card-click popups disabled) */
+/* categoryData = {
   coffee: {
     title: 'Hot Coffee',
     eyebrow: 'Hot Beverages',
@@ -473,112 +474,10 @@ const categoryData = {
       { name: 'Cinnamon Roll', subtitle: 'Soft Bun · Cream Cheese Glaze', desc: 'Soft baked bun rolled with cinnamon sugar and cream cheese glaze.', price: '24 EGP', tags: ['Cinnamon Sugar', 'Cream Cheese Glaze', 'Soft'], emoji: '🌀', badge: 'Best Seller' }
     ]
   }
-};
-
-const catModalOverlay = document.getElementById('catModalOverlay');
-const catModalClose   = document.getElementById('catModalClose');
-const catModalTitle   = document.getElementById('catModalTitle');
-const catModalEyebrow = document.getElementById('catModalEyebrow');
-const catModalBody    = document.getElementById('catModalBody');
-let currentCategoryKey = 'coffee';
-
-function renderModalCategoryContent(catKey) {
-  const data = categoryData[catKey];
-  if (!data) return;
-
-  currentCategoryKey = catKey;
-
-  if (catModalEyebrow) catModalEyebrow.textContent = data.eyebrow || 'Menu Category';
-  if (catModalTitle) catModalTitle.textContent = data.title || 'Category';
-
-  // Highlight active modal tab
-  document.querySelectorAll('.cat-modal-tab-btn').forEach(btn => {
-    if (btn.dataset.cat === catKey) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  });
-
-  if (catModalBody) {
-    let html = '<div class="modal-grid">';
-    data.items.forEach((item, index) => {
-      const badgeHtml = item.badge ? `<div class="modal-card-badge">${item.badge}</div>` : '';
-      
-      let visualHtml = '';
-      if (item.img) {
-        visualHtml = `<img src="${item.img}" alt="${item.name}" class="modal-card-img" loading="lazy" />`;
-      } else {
-        visualHtml = `<div class="modal-card-placeholder">${item.emoji || '☕'}</div>`;
-      }
-
-      const subtitleText = item.subtitle || (item.tags ? item.tags.join(' · ') : '');
-      const tagsHtml = item.tags ? item.tags.map(t => `<span class="modal-card-tag">${t}</span>`).join('') : '';
-
-      html += `
-        <div class="modal-card" style="--card-index: ${index};">
-          <div class="modal-card-img-wrap">
-            ${visualHtml}
-            ${badgeHtml}
-          </div>
-          <div class="modal-card-content">
-            <h3 class="modal-card-title">${item.name}</h3>
-            ${subtitleText ? `<p class="modal-card-subtitle">${subtitleText}</p>` : ''}
-            <p class="modal-card-desc">${item.desc}</p>
-            <div class="modal-card-tags">${tagsHtml}</div>
-            <div class="modal-card-footer">
-              <span class="modal-card-price-label">PRICE</span>
-              <span class="modal-card-price">${item.price}</span>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-    html += '</div>';
-    catModalBody.innerHTML = html;
-    catModalBody.scrollTop = 0;
-  }
-}
-
-function openCategoryModal(catKey) {
-  if (!catModalOverlay) return;
-  renderModalCategoryContent(catKey || 'coffee');
-  
-  catModalOverlay.classList.remove('closing');
-  catModalOverlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-window.openCategoryModal = openCategoryModal;
-
-function switchModalCategory(catKey) {
-  renderModalCategoryContent(catKey);
-}
-window.switchModalCategory = switchModalCategory;
-
-function closeCategoryModal() {
-  if (!catModalOverlay) return;
-  catModalOverlay.classList.add('closing');
-  catModalOverlay.classList.remove('open');
-  setTimeout(() => {
-    catModalOverlay.classList.remove('closing');
-    document.body.style.overflow = '';
-  }, 350);
-}
-window.closeCategoryModal = closeCategoryModal;
-
-catModalClose?.addEventListener('click', closeCategoryModal);
-
-catModalOverlay?.addEventListener('click', (e) => {
-  if (e.target === catModalOverlay) {
-    closeCategoryModal();
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && catModalOverlay?.classList.contains('open')) {
-    closeCategoryModal();
-  }
-});
+}; */
+// All category modal functions (openCategoryModal, closeCategoryModal,
+// renderModalCategoryContent, switchModalCategory) have been removed.
+// Product card clicks no longer open any secondary popup.
 
 /* ── Parallax Effects ─────────────────────────────────────── */
 const heroBg = document.querySelector('.hero-img-bg');
@@ -687,28 +586,9 @@ window.addEventListener('DOMContentLoaded', () => {
   initCatCarousel3D();
 });
 
-/* ── Menu Card Event Delegation (open modal on card click) ── */
-document.addEventListener('click', (e) => {
-  // Cards with data-action attribute
-  const card = e.target.closest('[data-action="open-category"]');
-  if (card) {
-    const catKey = card.dataset.cat;
-    if (catKey) openCategoryModal(catKey);
-    return;
-  }
-  // Legacy inline-onclick fallback already handled by function scope
-});
-
-/* ── Cat Modal Tabs Event Delegation ───────────────────────── */
-const catModalTabs = document.getElementById('catModalTabs');
-if (catModalTabs) {
-  catModalTabs.addEventListener('click', (e) => {
-    const btn = e.target.closest('.cat-modal-tab-btn');
-    if (!btn) return;
-    const catKey = btn.dataset.cat;
-    if (catKey) switchModalCategory(catKey);
-  }, { passive: true });
-}
+/* ── Menu Card Event Delegation — DISABLED ─────────────────── */
+// Product card click → modal behavior has been completely removed.
+// Cards are now display-only; pointer-events and cursor are set to default in CSS.
 
 console.log('%cRELIEF Cafe 🍵', 'font-size:24px; font-weight:bold; color:#d4a853;');
 console.log('%cCoffee · Desserts · Moments', 'font-size:12px; color:#9a9080;');

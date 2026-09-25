@@ -751,25 +751,8 @@ section { position:relative; overflow:hidden; }
 ══════════════════════════════════════════════════════════ */
 
 
-/* ══════════════════════════════════════════════════════════
-   STATS BAND
-══════════════════════════════════════════════════════════ */
-.stats-band {
-  padding:56px 0;
-  background: var(--text-primary);
-  border-top:1px solid rgba(0,0,0,0.1);
-  border-bottom:1px solid rgba(0,0,0,0.1);
-}
-.stats-inner { display:flex; justify-content:space-around; align-items:center; }
-.stat-block { text-align:center; position:relative; }
-.stat-block:not(:last-child)::after {
-  content:''; position:absolute;
-  right:-40px; top:50%; transform:translateY(-50%);
-  width:1px; height:48px;
-  background: rgba(255,255,255,0.12);
-}
-.stat-num { display:block; font-family:var(--ff-serif); font-size:3.4rem; font-weight:300; color:var(--caramel-l); line-height:1; }
-.stat-lbl { display:block; font-size:.62rem; letter-spacing:.3em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:8px; }
+
+
 
 /* ══════════════════════════════════════════════════════════
    MENU — Horizontal Scrolling Sections
@@ -1580,6 +1563,50 @@ footer {
 }
 .f-copy { font-size:.74rem; color:rgba(255,255,255,0.3); }
 .f-copy span { color:var(--caramel-l); }
+
+
+/* ══════════════════════════════════════════════════════════
+   PAGE END — Minimal Centered Sign-Off
+══════════════════════════════════════════════════════════ */
+.page-end {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+.page-end-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.page-end-quote {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #8C857B;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+.page-end-logo {
+  font-family: var(--ff-sans);
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #1A1715;
+  margin: 0 0 18px;
+}
+.page-end-rule {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--caramel-l), transparent);
+  margin-bottom: 18px;
+}
+.page-end-copy {
+  font-size: 0.8rem;
+  color: #B5AFA8;
+  letter-spacing: 1px;
+}
 
 /* ── Back to Top ─────────────────────────────────────────── */
 #back-top {
