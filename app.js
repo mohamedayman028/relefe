@@ -57,21 +57,125 @@ const translations = {
   }
 };
 
+/* ── Categories Definition Array ───────────────────────────── */
+const categories = [
+  { id: 'coffee',           nameEn: 'Hot Coffee',       nameAr: 'قهوة ساخنة' },
+  { id: 'hot',              nameEn: 'Hot Drinks',       nameAr: 'مشروبات ساخنة' },
+  { id: 'milkshakes',       nameEn: 'Milkshakes',       nameAr: 'ميلك شيك' },
+  { id: 'frappes',          nameEn: 'Frappes',          nameAr: 'فرابيه' },
+  { id: 'frappuccino',      nameEn: 'Frappuccino',      nameAr: 'فرابيتشينو' },
+  { id: 'matcha',           nameEn: 'Matcha',           nameAr: 'ماتشا' },
+  { id: 'boba',             nameEn: 'Boba',             nameAr: 'بوبا' },
+  { id: 'mojitos',          nameEn: 'Mojitos',          nameAr: 'موهيتو' },
+  { id: 'fresh-juices',     nameEn: 'Fresh Juices',     nameAr: 'عصائر طازجة' },
+  { id: 'ice-drinks',       nameEn: 'Ice Drinks',       nameAr: 'مشروبات مثلجة' },
+  { id: 'smoothies',        nameEn: 'Smoothies',        nameAr: 'سموزي' },
+  { id: 'soft-drinks',      nameEn: 'Soft Drinks',      nameAr: 'مشروبات غازية' },
+  { id: 'desserts',         nameEn: 'Desserts',         nameAr: 'حلويات' },
+  { id: 'specialty-coffee', nameEn: 'Specialty Coffee', nameAr: 'قهوة مختصة' },
+  { id: 'extra',            nameEn: 'Extras',           nameAr: 'إضافات' }
+];
+window.categories = categories;
+
 let currentLang = 'en';
 
-/* ── Category Data Store ───────────────────────────────────── */
+/* ── Full Bilingual Category Data Store ────────────────────── */
 const categoryData = {
+  coffee: [
+    { nameEn: "Espresso", nameAr: "إسبريسو", price: "55 EGP" },
+    { nameEn: "Hot Mocha", nameAr: "موكا ساخنة", price: "85 EGP" },
+    { nameEn: "Hot White Mocha", nameAr: "وايت موكا ساخنة", price: "90 EGP" },
+    { nameEn: "Hot Spanish Latte", nameAr: "سبانيش لاتيه ساخن", price: "95 EGP" },
+    { nameEn: "Hot Caramel Macchiato", nameAr: "كاراميل ماكياتو ساخن", price: "84 EGP" },
+    { nameEn: "Macchiato", nameAr: "ماكياتو", price: "65 EGP" },
+    { nameEn: "Cappuccino", nameAr: "كابوتشينو", price: "75 EGP" },
+    { nameEn: "Hot Latte", nameAr: "لاتيه ساخن", price: "73 EGP" },
+    { nameEn: "Flat White", nameAr: "فلات وايت", price: "75 EGP" },
+    { nameEn: "Hot Americano", nameAr: "أمريكانو ساخن", price: "75 EGP" },
+    { nameEn: "Nescafé", nameAr: "نسكافيه", price: "70 EGP" },
+    { nameEn: "Black Nescafé", nameAr: "نسكافيه بلاك", price: "55 EGP" },
+    { nameEn: "Turkish Coffee", nameAr: "قهوة تركي", price: "50 EGP" },
+    { nameEn: "Special Turkish Coffee", nameAr: "قهوة تركي مخصوص", price: "70 EGP" },
+    { nameEn: "Nutella Coffee", nameAr: "قهوة نوتيلا", price: "69 EGP" },
+    { nameEn: "Cortado", nameAr: "كورتادو", price: "70 EGP" }
+  ],
+  hot: [
+    { nameEn: "Hot Chocolate", nameAr: "شوكولاتة ساخنة", price: "77 EGP" },
+    { nameEn: "Hot Cider", nameAr: "سايدر تفاح ساخن", price: "53 EGP" },
+    { nameEn: "Hot Pistachio", nameAr: "بستاشيو ساخن", price: "83 EGP" },
+    { nameEn: "Hot Caramel", nameAr: "كراميل ساخن", price: "68 EGP" },
+    { nameEn: "Hot Lotus", nameAr: "لوتس ساخن", price: "73 EGP" },
+    { nameEn: "Hot Oreo", nameAr: "أوريو ساخن", price: "73 EGP" },
+    { nameEn: "Herbal Tea Mix", nameAr: "شاي أعشاب مشكل", price: "38 EGP" }
+  ],
+  milkshakes: [
+    { nameEn: "Chocolate Milkshake", nameAr: "ميلك شيك شوكولاتة", price: "75 EGP" },
+    { nameEn: "Vanilla Milkshake", nameAr: "ميلك شيك فانيليا", price: "70 EGP" },
+    { nameEn: "Strawberry Milkshake", nameAr: "ميلك شيك فراولة", price: "75 EGP" },
+    { nameEn: "Oreo Milkshake", nameAr: "ميلك شيك أوريو", price: "80 EGP" },
+    { nameEn: "Lotus Milkshake", nameAr: "ميلك شيك لوتس", price: "85 EGP" },
+    { nameEn: "Pistachio Milkshake", nameAr: "ميلك شيك بستاشيو", price: "90 EGP" }
+  ],
+  iceDrinks: [
+    { nameEn: "Iced Latte", nameAr: "آيس لاتيه", price: "65 EGP" },
+    { nameEn: "Iced Spanish Latte", nameAr: "آيس سبانيش لاتيه", price: "95 EGP" },
+    { nameEn: "Iced Americano", nameAr: "آيس أمريكانو", price: "60 EGP" },
+    { nameEn: "Iced Caramel Macchiato", nameAr: "آيس كراميل ماكياتو", price: "80 EGP" },
+    { nameEn: "Iced Mocha", nameAr: "آيس موكا", price: "85 EGP" }
+  ],
+  smoothies: [
+    { nameEn: "Strawberry Smoothie", nameAr: "سموزي فراولة", price: "50 EGP" },
+    { nameEn: "Mango Smoothie", nameAr: "سموزي مانجو", price: "55 EGP" },
+    { nameEn: "Passion Fruit Smoothie", nameAr: "سموزي باشن فروت", price: "60 EGP" },
+    { nameEn: "Peach Smoothie", nameAr: "سموزي خوخ", price: "55 EGP" }
+  ],
   extras: [
-    { name: "Boba Pearls", price: "35 EGP", description: "Add extra tapioca pearls" },
-    { name: "Extra Espresso Shot", price: "45 EGP", description: "Add an extra shot of espresso" },
-    { name: "Ice Cream Scoop", price: "30 EGP", description: "Add a scoop of ice cream" },
-    { name: "Honey", price: "25 EGP", description: "Add natural honey" },
-    { name: "Flavor Syrup", price: "35 EGP", description: "Add your favorite syrup flavor" },
-    { name: "Whipped Cream", price: "35 EGP", description: "Add creamy whipped topping" },
-    { name: "Mixed Nuts", price: "35 EGP", description: "Add a crunchy mixed nuts topping" }
+    { nameEn: "Boba Pearls", nameAr: "حبيبات البوبا", price: "35 EGP", descEn: "Add extra tapioca pearls", descAr: "إضافة حبيبات التابيوكا الإضافية" },
+    { nameEn: "Extra Espresso Shot", nameAr: "جرعة إسبريسو إضافية", price: "45 EGP", descEn: "Add an extra shot of espresso", descAr: "إضافة جرعة إسبريسو إضافية" },
+    { nameEn: "Ice Cream Scoop", nameAr: "كرة أيس كريم", price: "30 EGP", descEn: "Add a scoop of ice cream", descAr: "إضافة كرة أيس كريم" },
+    { nameEn: "Honey", nameAr: "عسل طبيعي", price: "25 EGP", descEn: "Add natural honey", descAr: "إضافة عسل طبيعي" },
+    { nameEn: "Flavor Syrup", nameAr: "سيروب نكهة", price: "35 EGP", descEn: "Add your favorite syrup flavor", descAr: "إضافة نكهة السيروب المفضلة لديك" },
+    { nameEn: "Whipped Cream", nameAr: "كريمة مخفوقة", price: "35 EGP", descEn: "Add creamy whipped topping", descAr: "إضافة طبقة كريمة مخفوقة" },
+    { nameEn: "Mixed Nuts", nameAr: "مكسرات مشكلة", price: "35 EGP", descEn: "Add a crunchy mixed nuts topping", descAr: "إضافة مكسرات مقرمشة مشكلة" }
   ]
 };
 window.categoryData = categoryData;
+
+/* ── Product Name Translation Mapping ─────────────────────── */
+const productNameMap = {
+  "Espresso": { en: "Espresso", ar: "إسبريسو" },
+  "Hot Mocha": { en: "Hot Mocha", ar: "موكا ساخنة" },
+  "Hot White Mocha": { en: "Hot White Mocha", ar: "وايت موكا ساخنة" },
+  "Hot Spanish Latte": { en: "Hot Spanish Latte", ar: "سبانيش لاتيه ساخن" },
+  "Hot Caramel Macchiato": { en: "Hot Caramel Macchiato", ar: "كاراميل ماكياتو ساخن" },
+  "Macchiato": { en: "Macchiato", ar: "ماكياتو" },
+  "Cappuccino": { en: "Cappuccino", ar: "كابوتشينو" },
+  "Hot Latte": { en: "Hot Latte", ar: "لاتيه ساخن" },
+  "Flat White": { en: "Flat White", ar: "فلات وايت" },
+  "Hot Americano": { en: "Hot Americano", ar: "أمريكانو ساخن" },
+  "Nescafé": { en: "Nescafé", ar: "نسكافيه" },
+  "Necafé": { en: "Nescafé", ar: "نسكافيه" },
+  "Black Nescafé": { en: "Black Nescafé", ar: "نسكافيه بلاك" },
+  "Turkish Coffee": { en: "Turkish Coffee", ar: "قهوة تركي" },
+  "Special Turkish Coffee": { en: "Special Turkish Coffee", ar: "قهوة تركي مخصوص" },
+  "Nutella Coffee": { en: "Nutella Coffee", ar: "قهوة نوتيلا" },
+  "Cortado": { en: "Cortado", ar: "كورتادو" },
+  "Hot Chocolate": { en: "Hot Chocolate", ar: "شوكولاتة ساخنة" },
+  "Hot Cider": { en: "Hot Cider", ar: "سايدر تفاح ساخن" },
+  "Hot Pistachio": { en: "Hot Pistachio", ar: "بستاشيو ساخن" },
+  "Hot Caramel": { en: "Hot Caramel", ar: "كراميل ساخن" },
+  "Hot Lotus": { en: "Hot Lotus", ar: "لوتس ساخن" },
+  "Hot Oreo": { en: "Hot Oreo", ar: "أوريو ساخن" },
+  "Herbal Tea Mix": { en: "Herbal Tea Mix", ar: "شاي أعشاب مشكل" },
+  "The Black Espresso": { en: "The Black Espresso", ar: "بلاكس إسبريسو" },
+  "Velvet Cappuccino": { en: "Velvet Cappuccino", ar: "فيلفيت كابوتشينو" },
+  "Iced Spanish Latte": { en: "Iced Spanish Latte", ar: "آيس سبانيش لاتيه" },
+  "Iced Latte": { en: "Iced Latte", ar: "آيس لاتيه" },
+  "Strawberry Smoothie": { en: "Strawberry Smoothie", ar: "سموزي فراولة" },
+  "Mango Smoothie": { en: "Mango Smoothie", ar: "سموزي مانجو" },
+  "San Sebastian Cheesecake": { en: "San Sebastian Cheesecake", ar: "تشيز كيك سان سباستيان" },
+  "Belgian Waffle": { en: "Belgian Waffle", ar: "وافل بلجيكي" }
+};
 
 /**
  * Renders the Extras panel dynamically using categoryData.extras into
@@ -81,17 +185,25 @@ function renderExtrasPanel() {
   const container = document.querySelector('#panel-extra .extras-list');
   if (!container || !categoryData || !categoryData.extras) return;
 
-  container.innerHTML = categoryData.extras.map(item => `
-    <div class="extra-item">
-      <div class="extra-info">
-        <div class="extra-name">${item.name}</div>
-        ${item.description ? `<div class="extra-description">${item.description}</div>` : ''}
+  const isAr = currentLang === 'ar';
+
+  container.innerHTML = categoryData.extras.map(item => {
+    const name = isAr ? (item.nameAr || item.nameEn || item.name) : (item.nameEn || item.name);
+    const desc = isAr ? (item.descAr || item.descEn || item.description) : (item.descEn || item.description);
+    const priceVal = item.price ? item.price.replace(' EGP', '').replace('EGP', '').trim() : '';
+
+    return `
+      <div class="extra-item">
+        <div class="extra-info">
+          <div class="extra-name">${name}</div>
+          ${desc ? `<div class="extra-description">${desc}</div>` : ''}
+        </div>
+        <div class="extra-price">
+          <span class="price-unit">${isAr ? 'ج.م ' : 'EGP '}</span>${priceVal}
+        </div>
       </div>
-      <div class="extra-price">
-        <span class="price-unit">EGP </span>${item.price.replace(' EGP', '').replace('EGP', '').trim()}
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 window.renderExtrasPanel = renderExtrasPanel;
 
@@ -148,8 +260,9 @@ window.animateExtrasPanel = animateExtrasPanel;
 /* ── Language Toggle Logic ─────────────────────────────────── */
 function applyTranslations(lang) {
   const t = translations[lang];
+  const isRTL = lang === 'ar';
 
-  // Update data-i18n elements
+  // 1. Update data-i18n elements
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) {
@@ -157,25 +270,44 @@ function applyTranslations(lang) {
     }
   });
 
-  // Update carousel card titles
+  // 2. Update carousel card titles
   document.querySelectorAll('.cat-ring-card[data-tab]').forEach(card => {
     const tabId = card.dataset.tab;
-    const key   = 'cat-' + tabId;
+    const catObj = categories.find(c => c.id === tabId);
     const titleEl = card.querySelector('.cat-card-title');
-    if (titleEl && t[key]) {
-      titleEl.textContent = t[key];
+    if (titleEl) {
+      if (catObj) {
+        titleEl.textContent = isRTL ? catObj.nameAr : catObj.nameEn;
+      } else if (t['cat-' + tabId]) {
+        titleEl.textContent = t['cat-' + tabId];
+      }
     }
   });
 
-  // Re-inject counts with correct language suffix
+  // 3. Update DOM product names in .card-name
+  document.querySelectorAll('.card-name').forEach(nameEl => {
+    const text = nameEl.textContent.trim();
+    if (!nameEl.dataset.nameEn) {
+      nameEl.dataset.nameEn = text;
+    }
+    const origEn = nameEl.dataset.nameEn;
+    const match = productNameMap[origEn];
+    if (match) {
+      nameEl.textContent = isRTL ? match.ar : match.en;
+    }
+  });
+
+  // 4. Re-render Extras panel
+  renderExtrasPanel();
+
+  // 5. Re-inject counts with correct language suffix
   updateCategoryCounts();
 
-  // Update html lang + dir
-  const isRTL = lang === 'ar';
+  // 6. Update html lang + dir
   document.documentElement.lang = isRTL ? 'ar' : 'en';
   document.documentElement.dir  = isRTL ? 'rtl' : 'ltr';
 
-  // Update toggle button label
+  // 7. Update toggle button label
   const labelEl = document.getElementById('langLabel');
   if (labelEl) labelEl.textContent = isRTL ? 'EN' : 'AR';
 }

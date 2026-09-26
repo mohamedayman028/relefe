@@ -96,8 +96,7 @@ html, body {
   margin: 0;
   padding: 0;
   position: relative;
-  overscroll-behavior: none;
-  touch-action: pan-y;
+  overscroll-behavior-x: none;
   -webkit-text-size-adjust: 100%;
 }
 
