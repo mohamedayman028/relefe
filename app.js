@@ -141,40 +141,168 @@ const categoryData = {
 };
 window.categoryData = categoryData;
 
-/* ── Product Name Translation Mapping ─────────────────────── */
+/* ── Product Name Translation Mapping (100% Complete) ─────── */
 const productNameMap = {
-  "Espresso": { en: "Espresso", ar: "إسبريسو" },
-  "Hot Mocha": { en: "Hot Mocha", ar: "موكا ساخنة" },
-  "Hot White Mocha": { en: "Hot White Mocha", ar: "وايت موكا ساخنة" },
-  "Hot Spanish Latte": { en: "Hot Spanish Latte", ar: "سبانيش لاتيه ساخن" },
-  "Hot Caramel Macchiato": { en: "Hot Caramel Macchiato", ar: "كاراميل ماكياتو ساخن" },
-  "Macchiato": { en: "Macchiato", ar: "ماكياتو" },
-  "Cappuccino": { en: "Cappuccino", ar: "كابوتشينو" },
-  "Hot Latte": { en: "Hot Latte", ar: "لاتيه ساخن" },
-  "Flat White": { en: "Flat White", ar: "فلات وايت" },
-  "Hot Americano": { en: "Hot Americano", ar: "أمريكانو ساخن" },
-  "Nescafé": { en: "Nescafé", ar: "نسكافيه" },
-  "Necafé": { en: "Nescafé", ar: "نسكافيه" },
-  "Black Nescafé": { en: "Black Nescafé", ar: "نسكافيه بلاك" },
-  "Turkish Coffee": { en: "Turkish Coffee", ar: "قهوة تركي" },
-  "Special Turkish Coffee": { en: "Special Turkish Coffee", ar: "قهوة تركي مخصوص" },
-  "Nutella Coffee": { en: "Nutella Coffee", ar: "قهوة نوتيلا" },
-  "Cortado": { en: "Cortado", ar: "كورتادو" },
-  "Hot Chocolate": { en: "Hot Chocolate", ar: "شوكولاتة ساخنة" },
-  "Hot Cider": { en: "Hot Cider", ar: "سايدر تفاح ساخن" },
-  "Hot Pistachio": { en: "Hot Pistachio", ar: "بستاشيو ساخن" },
-  "Hot Caramel": { en: "Hot Caramel", ar: "كراميل ساخن" },
-  "Hot Lotus": { en: "Hot Lotus", ar: "لوتس ساخن" },
-  "Hot Oreo": { en: "Hot Oreo", ar: "أوريو ساخن" },
-  "Herbal Tea Mix": { en: "Herbal Tea Mix", ar: "شاي أعشاب مشكل" },
-  "The Black Espresso": { en: "The Black Espresso", ar: "بلاكس إسبريسو" },
-  "Velvet Cappuccino": { en: "Velvet Cappuccino", ar: "فيلفيت كابوتشينو" },
-  "Iced Spanish Latte": { en: "Iced Spanish Latte", ar: "آيس سبانيش لاتيه" },
-  "Iced Latte": { en: "Iced Latte", ar: "آيس لاتيه" },
-  "Strawberry Smoothie": { en: "Strawberry Smoothie", ar: "سموزي فراولة" },
-  "Mango Smoothie": { en: "Mango Smoothie", ar: "سموزي مانجو" },
-  "San Sebastian Cheesecake": { en: "San Sebastian Cheesecake", ar: "تشيز كيك سان سباستيان" },
-  "Belgian Waffle": { en: "Belgian Waffle", ar: "وافل بلجيكي" }
+  /* ── Hot Coffee ── */
+  "Espresso":                    { en: "Espresso",                    ar: "إسبريسو" },
+  "Hot Mocha":                   { en: "Hot Mocha",                   ar: "موكا ساخنة" },
+  "Hot White Mocha":             { en: "Hot White Mocha",             ar: "وايت موكا ساخنة" },
+  "Hot Spanish Latte":           { en: "Hot Spanish Latte",           ar: "سبانيش لاتيه ساخن" },
+  "Hot Caramel Macchiato":       { en: "Hot Caramel Macchiato",       ar: "كاراميل ماكياتو ساخن" },
+  "Macchiato":                   { en: "Macchiato",                   ar: "ماكياتو" },
+  "Cappuccino":                  { en: "Cappuccino",                  ar: "كابوتشينو" },
+  "Hot Latte":                   { en: "Hot Latte",                   ar: "لاتيه ساخن" },
+  "Flat White":                  { en: "Flat White",                  ar: "فلات وايت" },
+  "Hot Americano":               { en: "Hot Americano",               ar: "أمريكانو ساخن" },
+  "Nescafé":                     { en: "Nescafé",                     ar: "نسكافيه" },
+  "Necafé":                      { en: "Nescafé",                     ar: "نسكافيه" },
+  "Black Nescafé":               { en: "Black Nescafé",               ar: "نسكافيه بلاك" },
+  "Turkish Coffee":              { en: "Turkish Coffee",              ar: "قهوة تركي" },
+  "Special Turkish Coffee":      { en: "Special Turkish Coffee",      ar: "قهوة تركي مخصوص" },
+  "Nutella Coffee":              { en: "Nutella Coffee",              ar: "قهوة نوتيلا" },
+  "Cortado":                     { en: "Cortado",                     ar: "كورتادو" },
+
+  /* ── Hot Drinks ── */
+  "Hot Chocolate":               { en: "Hot Chocolate",               ar: "شوكولاتة ساخنة" },
+  "Hot Cider":                   { en: "Hot Cider",                   ar: "سايدر تفاح ساخن" },
+  "Hot Pistachio":               { en: "Hot Pistachio",               ar: "بستاشيو ساخن" },
+  "Hot Caramel":                 { en: "Hot Caramel",                 ar: "كراميل ساخن" },
+  "Hot Lotus":                   { en: "Hot Lotus",                   ar: "لوتس ساخن" },
+  "Hot Oreo":                    { en: "Hot Oreo",                    ar: "أوريو ساخن" },
+  "Herbal Tea Mix":              { en: "Herbal Tea Mix",              ar: "شاي أعشاب مشكل" },
+  "Anise Tea":                   { en: "Anise Tea",                   ar: "شاي يانسون" },
+  "Hibiscus Tea":                { en: "Hibiscus Tea",                ar: "شاي كركديه" },
+  "Tea":                         { en: "Tea",                         ar: "شاي" },
+  "Milk Tea":                    { en: "Milk Tea",                    ar: "شاي بالحليب" },
+  "Sahlab with Mixed Nuts":      { en: "Sahlab with Mixed Nuts",      ar: "سحلب بالمكسرات المشكلة" },
+
+  /* ── Milkshakes ── */
+  "Oreo Milkshake":              { en: "Oreo Milkshake",              ar: "ميلك شيك أوريو" },
+  "Caramel Milkshake":           { en: "Caramel Milkshake",           ar: "ميلك شيك كراميل" },
+  "Chocolate Milkshake":         { en: "Chocolate Milkshake",         ar: "ميلك شيك شوكولاتة" },
+  "Nutella Milkshake":           { en: "Nutella Milkshake",           ar: "ميلك شيك نوتيلا" },
+  "Pistachio Milkshake":         { en: "Pistachio Milkshake",         ar: "ميلك شيك بستاشيو" },
+  "Lotus Milkshake":             { en: "Lotus Milkshake",             ar: "ميلك شيك لوتس" },
+  "Peach Milkshake":             { en: "Peach Milkshake",             ar: "ميلك شيك خوخ" },
+  "Blueberry Milkshake":         { en: "Blueberry Milkshake",         ar: "ميلك شيك توت أزرق" },
+  "Kinder Milkshakee":           { en: "Kinder Milkshake",            ar: "ميلك شيك كيندر" },
+  "KitKat Milkshake":            { en: "KitKat Milkshake",            ar: "ميلك شيك كيت كات" },
+  "Snickers Milkshake":          { en: "Snickers Milkshake",          ar: "ميلك شيك سنيكرز" },
+  "Vanilla Milkshake":           { en: "Vanilla Milkshake",           ar: "ميلك شيك فانيليا" },
+  "Strawberry Milkshake":        { en: "Strawberry Milkshake",        ar: "ميلك شيك فراولة" },
+  "Mango Milkshake":             { en: "Mango Milkshake",             ar: "ميلك شيك مانجو" },
+  "Galaxy Milkshake":            { en: "Galaxy Milkshake",            ar: "ميلك شيك جالاكسي" },
+
+  /* ── Frappes ── */
+  "Classic Frappe":              { en: "Classic Frappe",              ar: "فرابيه كلاسيك" },
+  "White Mocha Frappe":          { en: "White Mocha Frappe",          ar: "فرابيه وايت موكا" },
+  "Mocha Frappe":                { en: "Mocha Frappe",                ar: "فرابيه موكا" },
+  "Caramel Frappe":              { en: "Caramel Frappe",              ar: "فرابيه كراميل" },
+
+  /* ── Frappuccino ── */
+  "Caramel Frappuccino":         { en: "Caramel Frappuccino",         ar: "فرابيتشينو كراميل" },
+  "Mocha Frappuccino":           { en: "Mocha Frappuccino",           ar: "فرابيتشينو موكا" },
+
+  /* ── Matcha ── */
+  "Iced Matcha":                 { en: "Iced Matcha",                 ar: "آيس ماتشا" },
+  "Iced Mango Matcha":           { en: "Iced Mango Matcha",           ar: "آيس ماتشا بالمانجو" },
+  "Iced Caramel Matcha":         { en: "Iced Caramel Matcha",         ar: "آيس ماتشا بالكراميل" },
+  "Iced Strawberry Matcha":      { en: "Iced Strawberry Matcha",      ar: "آيس ماتشا بالفراولة" },
+  "Iced Coconut Matcha":         { en: "Iced Coconut Matcha",         ar: "آيس ماتشا بجوز الهند" },
+  "Hot Matcha":                  { en: "Hot Matcha",                  ar: "ماتشا ساخنة" },
+  "Hot Honey Matcha":            { en: "Hot Honey Matcha",            ar: "ماتشا ساخنة بالعسل" },
+
+  /* ── Boba ── */
+  "Soft Passion Boba":           { en: "Soft Passion Boba",           ar: "بوبا باشن فروت" },
+  "Soft Mango Boba":             { en: "Soft Mango Boba",             ar: "بوبا مانجو" },
+  "Soft Blueberry Boba":         { en: "Soft Blueberry Boba",         ar: "بوبا توت أزرق" },
+  "Soft Pineapple Boba":         { en: "Soft Pineapple Boba",         ar: "بوبا أناناس" },
+  "Soft Strawberry Boba":        { en: "Soft Strawberry Boba",        ar: "بوبا فراولة" },
+  "Blueberry Boba Milkshake":    { en: "Blueberry Boba Milkshake",    ar: "ميلك شيك بوبا توت أزرق" },
+  "Mango Boba Milkshake":        { en: "Mango Boba Milkshake",        ar: "ميلك شيك بوبا مانجو" },
+  "Strawberry Boba Milkshake":   { en: "Strawberry Boba Milkshake",   ar: "ميلك شيك بوبا فراولة" },
+  "Passion Boba Milkshake":      { en: "Passion Boba Milkshake",      ar: "ميلك شيك بوبا باشن فروت" },
+  "Peach Boba Milkshake":        { en: "Peach Boba Milkshake",        ar: "ميلك شيك بوبا خوخ" },
+  "Mango Boba Smoothie":         { en: "Mango Boba Smoothie",         ar: "سموزي بوبا مانجو" },
+  "Peach Boba Smoothie":         { en: "Peach Boba Smoothie",         ar: "سموزي بوبا خوخ" },
+  "Strawberry Boba Smoothie":    { en: "Strawberry Boba Smoothie",    ar: "سموزي بوبا فراولة" },
+  "Passion Boba Smoothie":       { en: "Passion Boba Smoothie",       ar: "سموزي بوبا باشن فروت" },
+  "Blueberry Boba Smoothie":     { en: "Blueberry Boba Smoothie",     ar: "سموزي بوبا توت أزرق" },
+
+  /* ── Mojitos ── */
+  "Pink Lemonade Mojito":        { en: "Pink Lemonade Mojito",        ar: "موهيتو ليمون وردي" },
+  "Blue Passion Mojito":         { en: "Blue Passion Mojito",         ar: "موهيتو باشن أزرق" },
+  "Relief Black Mojito":         { en: "Relief Black Mojito",         ar: "موهيتو ريليف الأسود" },
+  "Mixed Berry Mojito":          { en: "Mixed Berry Mojito",          ar: "موهيتو توت مشكل" },
+  "Blueberry Mojito":            { en: "Blueberry Mojito",            ar: "موهيتو توت أزرق" },
+  "Passion Fruit Mojito":        { en: "Passion Fruit Mojito",        ar: "موهيتو باشن فروت" },
+  "Pineapple Mojito":            { en: "Pineapple Mojito",            ar: "موهيتو أناناس" },
+  "Strawberry Mojito":           { en: "Strawberry Mojito",           ar: "موهيتو فراولة" },
+  "Peach Mojito":                { en: "Peach Mojito",                ar: "موهيتو خوخ" },
+  "Mango Mojito":                { en: "Mango Mojito",                ar: "موهيتو مانجو" },
+  "Blue Curaçao Mojito":         { en: "Blue Curaçao Mojito",         ar: "موهيتو كوراساو الأزرق" },
+  "Classic Mojito":              { en: "Classic Mojito",              ar: "موهيتو كلاسيك" },
+
+  /* ── Fresh Juices ── */
+  "Mango Juice":                 { en: "Mango Juice",                 ar: "عصير مانجو" },
+  "Strawberry Juice":            { en: "Strawberry Juice",            ar: "عصير فراولة" },
+  "Kiwi Juice":                  { en: "Kiwi Juice",                  ar: "عصير كيوي" },
+  "Cantaloupe & Vanilla Juice":  { en: "Cantaloupe & Vanilla Juice",  ar: "عصير شمام وفانيليا" },
+  "Banana Milk Juice":           { en: "Banana Milk Juice",           ar: "عصير موز بالحليب" },
+  "Watermelon Juice":            { en: "Watermelon Juice",            ar: "عصير بطيخ" },
+  "Watermelon & Vanilla Juice":  { en: "Watermelon & Vanilla Juice",  ar: "عصير بطيخ وفانيليا" },
+  "Lemon Juice":                 { en: "Lemon Juice",                 ar: "عصير ليمون" },
+  "Lemon Mint Juice":            { en: "Lemon Mint Juice",            ar: "عصير ليمون بالنعناع" },
+  "Dates & Mixed Nuts Juice":    { en: "Dates & Mixed Nuts Juice",    ar: "عصير تمر بالمكسرات" },
+  "Avocado Juice":               { en: "Avocado Juice",               ar: "عصير أفوكادو" },
+
+  /* ── Ice Drinks ── */
+  "Iced Americano":              { en: "Iced Americano",              ar: "آيس أمريكانو" },
+  "Iced Latte":                  { en: "Iced Latte",                  ar: "آيس لاتيه" },
+  "Iced Spanish Latte":          { en: "Iced Spanish Latte",          ar: "آيس سبانيش لاتيه" },
+  "Iced Mocha":                  { en: "Iced Mocha",                  ar: "آيس موكا" },
+  "Iced Caramel Macchiato":      { en: "Iced Caramel Macchiato",      ar: "آيس كراميل ماكياتو" },
+  "Iced White Mocha":            { en: "Iced White Mocha",            ar: "آيس وايت موكا" },
+  "Iced Tapioca Coffee":         { en: "Iced Tapioca Coffee",         ar: "آيس قهوة تابيوكا" },
+
+  /* ── Smoothies ── */
+  "Strawberry Smoothie":         { en: "Strawberry Smoothie",         ar: "سموزي فراولة" },
+  "Kiwi Smoothie":               { en: "Kiwi Smoothie",               ar: "سموزي كيوي" },
+  "Pineapple Smoothie":          { en: "Pineapple Smoothie",          ar: "سموزي أناناس" },
+  "Mango Smoothie":              { en: "Mango Smoothie",              ar: "سموزي مانجو" },
+  "Peach Smoothie":              { en: "Peach Smoothie",              ar: "سموزي خوخ" },
+  "Blueberry Smoothie":          { en: "Blueberry Smoothie",          ar: "سموزي توت أزرق" },
+  "Mixed Berry Smoothie":        { en: "Mixed Berry Smoothie",        ar: "سموزي توت مشكل" },
+  "Green Apple Smoothie":        { en: "Green Apple Smoothie",        ar: "سموزي تفاح أخضر" },
+  "Passion Fruit Smoothie":      { en: "Passion Fruit Smoothie",      ar: "سموزي باشن فروت" },
+  "Lemon Mint Smoothie":         { en: "Lemon Mint Smoothie",         ar: "سموزي ليمون بالنعناع" },
+
+  /* ── Soft Drinks ── */
+  "Pepi Cola":                   { en: "Pepsi Cola",                  ar: "بيبسي كولا" },
+  "7Up":                         { en: "7Up",                         ar: "سفن أب" },
+  "Twist":                       { en: "Twist",                       ar: "تويست" },
+  "Schweppes":                   { en: "Schweppes",                   ar: "شويبس" },
+  "Red Bull ":                   { en: "Red Bull",                    ar: "ريد بول" },
+  "Monster Energy":              { en: "Monster Energy",              ar: "مونستر إنرجي" },
+  "Mineral Water":               { en: "Mineral Water",               ar: "مياه معدنية" },
+
+  /* ── Desserts ── */
+  "Lotus Cheesecake":            { en: "Lotus Cheesecake",            ar: "تشيز كيك لوتس" },
+  "San Sebastian":               { en: "San Sebastian",               ar: "سان سيباستيان" },
+  "Chocolate Cheesecake":        { en: "Chocolate Cheesecake",        ar: "تشيز كيك شوكولاتة" },
+  "Red Velvet Cake":             { en: "Red Velvet Cake",             ar: "كيك ريد فيلفيت" },
+  "Russian Honey Cake":          { en: "Russian Honey Cake",          ar: "كيك العسل الروسي" },
+
+  /* ── Specialty Coffee ── */
+  "Hot V60":                     { en: "Hot V60",                     ar: "في60 ساخن" },
+  "Iced V60":                    { en: "Iced V60",                    ar: "في60 مثلج" },
+  "Cold Brew":                   { en: "Cold Brew",                   ar: "كولد برو" },
+
+  /* ── Legacy / Alias Keys ── */
+  "The Black Espresso":          { en: "The Black Espresso",          ar: "إسبريسو الأسود" },
+  "Velvet Cappuccino":           { en: "Velvet Cappuccino",           ar: "كابوتشينو مخملي" },
+  "San Sebastian Cheesecake":    { en: "San Sebastian Cheesecake",    ar: "تشيز كيك سان سيباستيان" },
+  "Belgian Waffle":              { en: "Belgian Waffle",              ar: "وافل بلجيكي" }
 };
 
 /**
@@ -826,11 +954,43 @@ sections.forEach(s => sectionObserver.observe(s));
 
 /* ── Init Page State ──────────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
+  // 1. Load saved language from localStorage (default: 'en')
+  const savedLang = localStorage.getItem('relief-lang') || 'en';
+  currentLang = savedLang;
+
+  // 2. Render extras panel before translations so data exists
   renderExtrasPanel();
+
+  // 3. Init carousel (builds DOM nodes that translations will target)
   initCatCarousel3D();
+
+  // 4. Apply full translations for the saved language immediately
+  applyTranslations(currentLang);
+
+  // 5. Update item counts with the correct language suffix
   updateCategoryCounts();
+
+  // 6. Wire up the language toggle button
   initLangToggle();
 });
+
+/* ── Save Language on Toggle ──────────────────────────────── */
+// Patch initLangToggle to also persist the choice
+const _origInitLangToggle = initLangToggle;
+function initLangToggle() {
+  const btn = document.getElementById('langToggle');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    btn.classList.add('switching');
+    setTimeout(() => {
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
+      localStorage.setItem('relief-lang', currentLang);
+      applyTranslations(currentLang);
+      btn.classList.remove('switching');
+    }, 220);
+  });
+}
 
 /* ── Menu Card Event Delegation — DISABLED ─────────────────── */
 // Product card click → modal behavior has been completely removed.
