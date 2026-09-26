@@ -5,6 +5,197 @@
 
 'use strict';
 
+/* ── i18n Translations Dictionary ────────────────────────── */
+const translations = {
+  en: {
+    'nav-logo':        'RELIEF',
+    'nav-home':        'Home',
+    'nav-story':       'Our Story',
+    'nav-signature':   'Signature',
+    'nav-menu':        'Menu',
+    'nav-hours':       'Open daily \u00a0<span>7AM \u2013 1AM</span>',
+    'cat-coffee':      'Hot Coffee',
+    'cat-hot':         'Hot Drinks',
+    'cat-milkshakes':  'Milkshakes',
+    'cat-frappes':     'Frappes',
+    'cat-frappuccino': 'Frappuccino',
+    'cat-matcha':      'Matcha',
+    'cat-boba':        'Boba',
+    'cat-mojitos':     'Mojitos',
+    'cat-fresh-juices':'Fresh Juices',
+    'cat-ice-drinks':  'Ice Drinks',
+    'cat-smoothies':   'Smoothies',
+    'cat-soft-drinks': 'Soft Drinks',
+    'cat-desserts':    'Desserts',
+    'cat-specialty-coffee': 'Specialty Coffee',
+    'cat-extra':       'Extras',
+    'items-suffix':    'Items',
+  },
+  ar: {
+    'nav-logo':        'ريليف',
+    'nav-home':        'الرئيسية',
+    'nav-story':       'قصتنا',
+    'nav-signature':   'المميزة',
+    'nav-menu':        'القائمة',
+    'nav-hours':       'مفتوح يومياً \u00a0<span>7 صباحاً \u2013 1 صباحاً</span>',
+    'cat-coffee':      'قهوة ساخنة',
+    'cat-hot':         'مشروبات ساخنة',
+    'cat-milkshakes':  'ميلك شيك',
+    'cat-frappes':     'فرابيه',
+    'cat-frappuccino': 'فرابيتشينو',
+    'cat-matcha':      'ماتشا',
+    'cat-boba':        'بوبا',
+    'cat-mojitos':     'موهيتو',
+    'cat-fresh-juices':'عصائر طازجة',
+    'cat-ice-drinks':  'مشروبات مثلجة',
+    'cat-smoothies':   'سموزي',
+    'cat-soft-drinks': 'مشروبات غازية',
+    'cat-desserts':    'حلويات',
+    'cat-specialty-coffee': 'قهوة مختصة',
+    'cat-extra':       'إضافات',
+    'items-suffix':    'عنصر',
+  }
+};
+
+let currentLang = 'en';
+
+/* ── Category Data Store ───────────────────────────────────── */
+const categoryData = {
+  extras: [
+    { name: "Boba Pearls", price: "35 EGP", description: "Add extra tapioca pearls" },
+    { name: "Extra Espresso Shot", price: "45 EGP", description: "Add an extra shot of espresso" },
+    { name: "Ice Cream Scoop", price: "30 EGP", description: "Add a scoop of ice cream" },
+    { name: "Honey", price: "25 EGP", description: "Add natural honey" },
+    { name: "Flavor Syrup", price: "35 EGP", description: "Add your favorite syrup flavor" },
+    { name: "Whipped Cream", price: "35 EGP", description: "Add creamy whipped topping" },
+    { name: "Mixed Nuts", price: "35 EGP", description: "Add a crunchy mixed nuts topping" }
+  ]
+};
+window.categoryData = categoryData;
+
+/**
+ * Renders the Extras panel dynamically using categoryData.extras into
+ * the lightweight iOS glassmorphic list panel container.
+ */
+function renderExtrasPanel() {
+  const container = document.querySelector('#panel-extra .extras-list');
+  if (!container || !categoryData || !categoryData.extras) return;
+
+  container.innerHTML = categoryData.extras.map(item => `
+    <div class="extra-item">
+      <div class="extra-info">
+        <div class="extra-name">${item.name}</div>
+        ${item.description ? `<div class="extra-description">${item.description}</div>` : ''}
+      </div>
+      <div class="extra-price">
+        <span class="price-unit">EGP </span>${item.price.replace(' EGP', '').replace('EGP', '').trim()}
+      </div>
+    </div>
+  `).join('');
+}
+window.renderExtrasPanel = renderExtrasPanel;
+
+/* ── Dynamic Category Item Counts ─────────────────────────── */
+/**
+ * Counts the actual number of product items inside each panel.
+ * - Standard panels use .menu-card
+ * - The Extras panel uses categoryData.extras or .extra-item
+ * Injects the count into .cat-card-count on the matching carousel card.
+ */
+function updateCategoryCounts() {
+  const lang   = currentLang;
+  const suffix = translations[lang]['items-suffix'];
+
+  document.querySelectorAll('.cat-ring-card[data-tab]').forEach(card => {
+    const tabId   = card.dataset.tab;
+    const panel   = document.getElementById('panel-' + tabId);
+    const countEl = card.querySelector('.cat-card-count');
+    if (!panel || !countEl) return;
+
+    // Extras uses categoryData.extras or .extra-item; all others use .menu-card
+    const isExtras = tabId === 'extra';
+    const count    = isExtras
+      ? (categoryData && categoryData.extras ? categoryData.extras.length : panel.querySelectorAll('.extra-item').length)
+      : panel.querySelectorAll('.menu-card').length;
+
+    countEl.textContent = count + ' ' + suffix;
+  });
+}
+
+/* ── Extras Panel — Staggered Entrance Animation ───────────── */
+/**
+ * When the extras panel becomes active (via carousel nav), trigger
+ * a staggered slide-in animation on every .extra-item inside it.
+ */
+function animateExtrasPanel() {
+  const panel = document.getElementById('panel-extra');
+  if (!panel) return;
+
+  const items = panel.querySelectorAll('.extra-item');
+  items.forEach((item, i) => {
+    item.style.opacity    = '0';
+    item.style.transform  = 'translateX(-20px)';
+    item.style.transition = 'none';
+    // Force reflow
+    void item.offsetWidth;
+    item.style.transition = `opacity 0.5s ease ${i * 60}ms, transform 0.5s cubic-bezier(0.25, 1, 0.5, 1) ${i * 60}ms`;
+    item.style.opacity    = '1';
+    item.style.transform  = 'translateX(0)';
+  });
+}
+window.animateExtrasPanel = animateExtrasPanel;
+
+/* ── Language Toggle Logic ─────────────────────────────────── */
+function applyTranslations(lang) {
+  const t = translations[lang];
+
+  // Update data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) {
+      el.innerHTML = t[key];
+    }
+  });
+
+  // Update carousel card titles
+  document.querySelectorAll('.cat-ring-card[data-tab]').forEach(card => {
+    const tabId = card.dataset.tab;
+    const key   = 'cat-' + tabId;
+    const titleEl = card.querySelector('.cat-card-title');
+    if (titleEl && t[key]) {
+      titleEl.textContent = t[key];
+    }
+  });
+
+  // Re-inject counts with correct language suffix
+  updateCategoryCounts();
+
+  // Update html lang + dir
+  const isRTL = lang === 'ar';
+  document.documentElement.lang = isRTL ? 'ar' : 'en';
+  document.documentElement.dir  = isRTL ? 'rtl' : 'ltr';
+
+  // Update toggle button label
+  const labelEl = document.getElementById('langLabel');
+  if (labelEl) labelEl.textContent = isRTL ? 'EN' : 'AR';
+}
+
+function initLangToggle() {
+  const btn = document.getElementById('langToggle');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    // Animate label flip
+    btn.classList.add('switching');
+
+    setTimeout(() => {
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
+      applyTranslations(currentLang);
+      btn.classList.remove('switching');
+    }, 220);
+  });
+}
+
 /* ── Loader ───────────────────────────────────────────────── */
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -291,15 +482,19 @@ function switchMenuPanelOnly(tabId, activeCard) {
   if (panel) {
     panel.classList.add('active');
     
-    panel.querySelectorAll('.menu-card').forEach((card, i) => {
-      card.style.opacity = '0';
-      card.style.transform = 'translateY(30px)';
-      setTimeout(() => {
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, border-color 0.4s ease, box-shadow 0.5s ease';
-        card.style.opacity = '1';
-        card.style.transform = 'translateY(0)';
-      }, i * 80);
-    });
+    if (tabId === 'extra') {
+      animateExtrasPanel();
+    } else {
+      panel.querySelectorAll('.menu-card').forEach((card, i) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, border-color 0.4s ease, box-shadow 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, i * 80);
+      });
+    }
   }
 
   if (activeCard) activeCard.classList.add('active');
@@ -393,91 +588,7 @@ function initCategorySwiper() {
 window.initCategorySwiper = initCategorySwiper;
 
 
-/* ── Category Modal Data & Interaction — REMOVED (card-click popups disabled) */
-/* categoryData = {
-  coffee: {
-    title: 'Hot Coffee',
-    eyebrow: 'Hot Beverages',
-    items: [
-      { name: 'Espresso (Single)', subtitle: 'Single Shot · Ethiopian Beans', desc: 'Concentrated & rich single shot espresso brewed from fine arabica beans.', price: '55 EGP', tags: ['Single Shot', 'Arabica', 'Rich Crema'], img: 'espresso.png', badge: 'Classic' },
-      { name: 'Espresso (Double)', subtitle: 'Double Shot · Intense & Bold', desc: 'Double strength espresso shot delivering a full-bodied aromatic kick.', price: '65 EGP', tags: ['Double Shot', 'Bold', 'Single Origin'], img: 'espresso.png', badge: 'Signature' },
-      { name: 'Macchiato (Single)', subtitle: 'Single Shot · Touch of Foam', desc: 'Espresso marked with a delicate dollop of warm milk microfoam.', price: '65 EGP', tags: ['Single Shot', 'Microfoam', 'Balanced'], emoji: '☕' },
-      { name: 'Macchiato (Double)', subtitle: 'Double Shot · Touch of Foam', desc: 'Double espresso shot balanced with a light layer of velvety foam.', price: '70 EGP', tags: ['Double Shot', 'Velvety Foam', 'Intense'], emoji: '☕' },
-      { name: 'Hot Mocha', subtitle: 'Belgian Chocolate · Espresso · Steamed Milk', desc: 'Rich Belgian chocolate blended with espresso and silky steamed milk.', price: '85 EGP', tags: ['Belgian Chocolate', 'Indulgent', 'Steamed Milk'], emoji: '🍫' },
-      { name: 'Hot White Mocha', subtitle: 'White Chocolate · Espresso · Creamy Milk', desc: 'Smooth white chocolate combined with dark espresso and steamed milk.', price: '90 EGP', tags: ['White Chocolate', 'Sweet & Creamy', 'Rich'], emoji: '🤍', badge: 'Popular' },
-      { name: 'Hot Latte', subtitle: 'Steamed Milk · Smooth Espresso Shot', desc: 'Classic espresso poured over generous silky steamed milk.', price: '73 EGP', tags: ['Steamed Milk', 'Smooth', 'Comforting'], img: 'hero_coffee.png' },
-      { name: 'Hot Spanish Latte', subtitle: 'Condensed Milk · Double Espresso Shot', desc: 'Rich espresso layered with sweet condensed milk & velvety foam.', price: '95 EGP', tags: ['Condensed Milk', 'Sweet', 'Layered'], emoji: '🥛', badge: 'Best Seller' },
-      { name: 'Hot Caramel Macchiato', subtitle: 'Vanilla · Steamed Milk · Caramel Drizzle', desc: 'Freshly steamed milk with vanilla syrup, marked with espresso & caramel.', price: '84 EGP', tags: ['Vanilla Syrup', 'Caramel Drizzle', 'Sweet'], emoji: '🍯' },
-      { name: 'Cappuccino', subtitle: 'Equal Parts Espresso · Milk · Thick Foam', desc: 'Rich espresso topped with equal layers of steamed milk and fluffy foam.', price: '75 EGP', tags: ['Micro Foam', 'Latte Art', 'Classic'], img: 'hero_coffee.png' },
-      { name: 'Flat White', subtitle: 'Double Ristretto · Micro-Foam', desc: 'Smooth double ristretto shot topped with dense micro-textured milk.', price: '75 EGP', tags: ['Double Ristretto', 'Velvety', 'Intense'], emoji: '🤍' },
-      { name: 'Cortado', subtitle: 'Equal Parts Espresso & Steamed Milk', desc: 'Harmonious balance of 1:1 espresso and warm steamed milk.', price: '70 EGP', tags: ['Equal Parts', 'Espresso & Milk', 'Balanced'], emoji: '🤎' },
-      { name: 'Hot Americano', subtitle: 'Espresso · Hot Water Dilution', desc: 'Espresso diluted with hot water for a smooth, deep coffee flavor.', price: '75 EGP', tags: ['Smooth', 'Clean', 'Classic'], emoji: '☕' },
-      { name: 'Nescafé', subtitle: 'Classic Instant Coffee · Milk', desc: 'Comforting mug of classic rich coffee prepared with warm milk.', price: '70 EGP', tags: ['Classic', 'Creamy', 'Comforting'], emoji: '☕' },
-      { name: 'Black Nescafé', subtitle: 'Pure Black Coffee · Bold Brew', desc: 'Simple, bold black coffee brewed for a pure caffeine kick.', price: '55 EGP', tags: ['Pure Black', 'Bold', 'Quick Kick'], emoji: '☕' },
-      { name: 'Turkish Coffee', subtitle: 'Finely Ground · Traditional Roast', desc: 'Traditional authentic Turkish coffee brewed to perfection with thick foam.', price: '50 EGP', tags: ['Traditional', 'Thick Foam', 'Aromatic'], emoji: '☕', badge: 'Traditional' },
-      { name: 'Special Turkish Coffee', subtitle: 'Premium Spiced Turkish Roast', desc: 'Special custom-roasted Turkish coffee infused with aromatic cardamom.', price: '70 EGP', tags: ['Cardamom', 'Custom Roast', 'Premium'], emoji: '☕', badge: 'Chef Special' },
-      { name: 'Nutella Coffee', subtitle: 'Real Nutella Spread · Espresso · Milk', desc: 'Warm coffee infused with creamy Nutella hazelnut cocoa spread.', price: '69 EGP', tags: ['Nutella', 'Hazelnut', 'Decadent'], emoji: '🌰', badge: 'Must Try' }
-    ]
-  },
-  iced: {
-    title: 'Iced Drinks',
-    eyebrow: 'Cold Refreshment',
-    items: [
-      { name: 'Iced Latte', subtitle: 'Chilled Milk · Double Shot Espresso', desc: 'Espresso poured over chilled milk and crystal-clear ice cubes.', price: '22 - 26 EGP', tags: ['Cold Milk', 'Double Shot', 'Refreshing'], img: 'iced_latte.png', badge: 'Popular' },
-      { name: 'Iced Spanish Latte', subtitle: 'Sweet Condensed Milk · Layered Espresso', desc: 'Espresso with sweetened condensed milk served over ice.', price: '25 - 30 EGP', tags: ['Condensed Milk', 'Sweet', 'Layered'], emoji: '🥛', badge: 'Signature' },
-      { name: 'Iced Mocha', subtitle: 'Dark Chocolate Sauce · Cold Milk & Ice', desc: 'Cold espresso, dark chocolate sauce, cold milk and ice.', price: '25 - 30 EGP', tags: ['Dark Chocolate', 'Iced', 'Intense'], emoji: '🍫' },
-      { name: 'Cold Brew Coffee', subtitle: '18-Hour Slow Steeped · Single Origin', desc: 'Slow-steeped for 18 hours for an exceptionally smooth, sweet brew.', price: '28 EGP', tags: ['18h Steeped', 'Smooth', 'Zero Acidity'], emoji: '🧊', badge: 'Artisan' },
-      { name: 'Iced V60', subtitle: 'Flash-Chilled Filter Coffee', desc: 'Pour-over coffee brewed directly over ice for crisp, vibrant clarity.', price: '40 EGP', tags: ['Flash Chilled', 'Vibrant', 'Clean'], emoji: '☕' },
-      { name: 'Iced Matcha Latte', subtitle: 'Ceremonial Grade Japanese Matcha', desc: 'Ceremonial grade Japanese matcha whisked with cold milk.', price: '32 EGP', tags: ['Ceremonial Matcha', 'Antioxidants', 'Creamy'], emoji: '🍵' }
-    ]
-  },
-  cheesecake: {
-    title: 'Handcrafted Cheesecake',
-    eyebrow: 'Artisan Desserts',
-    items: [
-      { name: 'Lotus Cheesecake', subtitle: 'Biscoff Crust · Caramelized Drizzle', desc: 'Creamy cheesecake on a crunch Biscoff crust topped with Lotus drizzle.', price: '35 EGP', tags: ['Biscoff Crust', 'Caramel Drizzle', 'Creamy'], img: 'lotus_cheesecake.png', badge: 'Fan Favourite' },
-      { name: 'San Sebastian', subtitle: 'Spanish Burnt Basque · Molten Center', desc: 'Crustless Spanish burnt cheesecake with a silky, molten center.', price: '38 EGP', tags: ['Burnt Basque', 'Caramelized Top', 'Silky'], emoji: '🔥', badge: "Chef's Pick" },
-      { name: 'Chocolate Cheesecake', subtitle: 'Belgian Chocolate Ganache Glaze', desc: 'Rich Belgian dark chocolate cheesecake with chocolate ganache.', price: '36 EGP', tags: ['Dark Chocolate', 'Ganache Glaze', 'Decadent'], emoji: '🍫' },
-      { name: 'Strawberry Cheesecake', subtitle: 'New York Style · Fresh Berry Compote', desc: 'Classic New York style cheesecake topped with fresh strawberry compote.', price: '34 EGP', tags: ['NY Style', 'Fresh Strawberries', 'Fruity'], emoji: '🍓' },
-      { name: 'Pistachio Cheesecake', subtitle: 'Italian Pistachio Paste · Crushed Nuts', desc: 'Infused with roasted Italian pistachio paste & topped with crushed nuts.', price: '39 EGP', tags: ['Italian Pistachio', 'Nutty', 'Rich'], emoji: '🥑', badge: 'New' }
-    ]
-  },
-  waffles: {
-    title: 'Artisan Waffles',
-    eyebrow: 'Freshly Baked',
-    items: [
-      { name: 'Nutella Waffle', subtitle: 'Crisp Belgian Waffle · Warm Nutella', desc: 'Crisp Belgian waffle drizzled with warm Nutella & fresh strawberries.', price: '28 EGP', tags: ['Belgian Crisp', 'Fresh Strawberries', 'Powdered Sugar'], img: 'waffle.png', badge: 'Best Seller' },
-      { name: 'Lotus Waffle', subtitle: 'Lotus Biscoff Spread · Biscuit Crunch', desc: 'Topped with Lotus Biscoff spread, crushed biscuits & caramel drizzle.', price: '30 EGP', tags: ['Biscoff Spread', 'Caramel Drizzle', 'Crunchy'], emoji: '🍪', badge: 'New' },
-      { name: 'Mixed Fruits Waffle', subtitle: 'Seasonal Berries · Honey Drizzle', desc: 'Topped with fresh berries, banana, honey drizzle & whipped cream.', price: '28 EGP', tags: ['Seasonal Fruits', 'Honey Drizzle', 'Whipped Cream'], emoji: '🍓' },
-      { name: 'Kinder Waffle', subtitle: 'Melted Kinder Chocolate · Milk Drops', desc: 'Smothered in melted Kinder chocolate with milk chocolate drops.', price: '32 EGP', tags: ['Kinder Chocolate', 'Melting', 'Sweet'], emoji: '🍫' }
-    ]
-  },
-  desserts: {
-    title: 'Signature Desserts',
-    eyebrow: 'Sweet Moments',
-    items: [
-      { name: 'Red Velvet Cake', subtitle: 'Smooth Cream Cheese Frosting', desc: 'Layers of moist red velvet cake with smooth cream cheese frosting.', price: '34 EGP', tags: ['Cream Cheese Frosting', 'Moist', 'Elegant'], emoji: '❤️' },
-      { name: 'Russian Honey Cake', subtitle: 'Medovik · Caramelized Honey Layers', desc: 'Traditional Medovik with thin caramelized honey layers & light cream.', price: '40 EGP', tags: ['Medovik', 'Caramelized Honey', 'Layered'], emoji: '🍯', badge: 'Signature' },
-      { name: 'Tiramisu', subtitle: 'Espresso Soaked Savoiardi · Mascarpone', desc: 'Italian classic soaked in espresso and layered with mascarpone cream.', price: '36 EGP', tags: ['Espresso Soaked', 'Mascarpone', 'Cocoa Dust'], emoji: '☕' },
-      { name: 'Chocolate Fondant', subtitle: 'Warm Molten Lava · Vanilla Gelato', desc: 'Warm chocolate lava cake with a molten center, served with vanilla ice cream.', price: '38 EGP', tags: ['Molten Lava', 'Vanilla Scoop', 'Warm'], emoji: '🌋', badge: 'Must Try' },
-      { name: 'Fudge Brownies & Ice Cream', subtitle: 'Warm Chocolate Fudge · Vanilla Bean', desc: 'Decadent chocolate fudge brownie served warm with vanilla bean gelato.', price: '32 EGP', tags: ['Warm Fudge', 'Vanilla Gelato', 'Rich'], emoji: '🍨' }
-    ]
-  },
-  bakery: {
-    title: 'Fresh Bakery',
-    eyebrow: 'Daily Oven',
-    items: [
-      { name: 'Butter Croissant', subtitle: 'French Butter · Baked Fresh Daily', desc: 'Flaky, golden French croissant baked fresh every morning.', price: '16 EGP', tags: ['French Butter', 'Flaky', 'Fresh Daily'], emoji: '🥐', badge: 'Fresh Daily' },
-      { name: 'Almond Croissant', subtitle: 'Almond Frangipane · Toasted Almonds', desc: 'Filled with rich almond frangipane cream and topped with toasted almonds.', price: '22 EGP', tags: ['Almond Cream', 'Toasted Almonds', 'Sweet'], emoji: '🥐' },
-      { name: 'Pain au Chocolat', subtitle: 'Dark Chocolate Bars · Flaky Layers', desc: 'Classic French pastry filled with two bars of dark chocolate.', price: '20 EGP', tags: ['Dark Chocolate', 'Flaky Layers', 'Classic'], emoji: '🍫' },
-      { name: 'Cheese Danish', subtitle: 'Savory Cream Cheese · Herb Crust', desc: 'Puff pastry filled with savory cream cheese and herbs.', price: '18 EGP', tags: ['Savory Cheese', 'Puff Pastry', 'Warm'], emoji: '🧀' },
-      { name: 'Cinnamon Roll', subtitle: 'Soft Bun · Cream Cheese Glaze', desc: 'Soft baked bun rolled with cinnamon sugar and cream cheese glaze.', price: '24 EGP', tags: ['Cinnamon Sugar', 'Cream Cheese Glaze', 'Soft'], emoji: '🌀', badge: 'Best Seller' }
-    ]
-  }
-}; */
-// All category modal functions (openCategoryModal, closeCategoryModal,
-// renderModalCategoryContent, switchModalCategory) have been removed.
-// Product card clicks no longer open any secondary popup.
+
 
 /* ── Parallax Effects ─────────────────────────────────────── */
 const heroBg = document.querySelector('.hero-img-bg');
@@ -583,12 +694,13 @@ sections.forEach(s => sectionObserver.observe(s));
 
 /* ── Init Page State ──────────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
+  renderExtrasPanel();
   initCatCarousel3D();
+  updateCategoryCounts();
+  initLangToggle();
 });
 
 /* ── Menu Card Event Delegation — DISABLED ─────────────────── */
 // Product card click → modal behavior has been completely removed.
 // Cards are now display-only; pointer-events and cursor are set to default in CSS.
-
-console.log('%cRELIEF Cafe 🍵', 'font-size:24px; font-weight:bold; color:#d4a853;');
-console.log('%cCoffee · Desserts · Moments', 'font-size:12px; color:#9a9080;');
+
