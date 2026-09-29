@@ -1,32 +1,19 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>RELIEF — Premium Cafe | Coffee, Desserts, Moments</title>
-    <meta name="description" content="RELIEF — A premium cafe experience. Specialty coffee, handcrafted cheesecakes, artisan waffles, and unforgettable desserts." />
-    
-    <!-- Open Graph / Facebook / WhatsApp -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="RELIEF — Premium Cafe | Coffee, Desserts, Moments" />
-    <meta property="og:description" content="A premium cafe experience. Specialty coffee, handcrafted cheesecakes, artisan waffles, and unforgettable desserts." />
-    <meta property="og:image" content="hero_coffee.png" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="RELIEF — Premium Cafe | Coffee, Desserts, Moments" />
-    <meta name="twitter:description" content="A premium cafe experience. Specialty coffee, handcrafted cheesecakes, artisan waffles, and unforgettable desserts." />
-    <meta name="twitter:image" content="hero_coffee.png" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RELIEF — A premium cafe experience. Specialty coffee, handcrafted cheesecakes, artisan waffles and unforgettable desserts."
+    />
+    <meta property="og:title" content="RELIEF — Premium Cafe Menu" />
+    <title>RELIEF — Premium Cafe | Coffee, Desserts & Moments</title>
     <!-- External Libraries: FontAwesome v6 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <!-- Arabic + Latin Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -47,25 +34,21 @@
     <!-- ── Mobile Menu ────────────────────────────────────────── -->
     <div class="mobile-menu" id="mobileMenu">
       <button class="mobile-menu-close" id="mobileClose">✕</button>
-      <a href="#hero" class="mobile-nav-link" data-i18n="nav-home">Home</a>
-      <a href="#story" class="mobile-nav-link" data-i18n="nav-story">Our Story</a>
-      <a href="#signature" class="mobile-nav-link" data-i18n="nav-signature">Signature</a>
-      <a href="#menu" class="mobile-nav-link" data-i18n="nav-menu">Menu</a>
+      <a href="#hero" class="mobile-nav-link">Home</a>
+      <a href="#story" class="mobile-nav-link">Our Story</a>
+      <a href="#signature" class="mobile-nav-link">Signature</a>
+      <a href="#menu" class="mobile-nav-link">Menu</a>
     </div>
 
     <!-- ── Navigation ─────────────────────────────────────────── -->
     <nav id="navbar">
-      <a href="#hero" class="nav-logo" data-i18n="nav-logo">RELIEF</a>
+      <a href="#hero" class="nav-logo">RELIEF</a>
       <ul class="nav-links">
-        <li><a href="#story" data-i18n="nav-story">Our Story</a></li>
-        <li><a href="#signature" data-i18n="nav-signature">Signature</a></li>
-        <li><a href="#menu" data-i18n="nav-menu">Menu</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#signature">Signature</a></li>
+        <li><a href="#menu">Menu</a></li>
       </ul>
-      <div class="nav-hours" data-i18n="nav-hours">Open daily &nbsp;<span>7AM – 1AM</span></div>
-      <button class="lang-toggle" id="langToggle" aria-label="Toggle language" title="Switch to Arabic">
-        <span class="lang-globe">🌐</span>
-        <span class="lang-label" id="langLabel">AR</span>
-      </button>
+      <div class="nav-hours">Open daily &nbsp;<span>7AM – 1AM</span></div>
       <div class="nav-hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
@@ -373,7 +356,7 @@
 
         <div class="sig-card">
           <img
-            src="iced-spanish-latte.jpg"
+            src="iced_latte.png"
             alt="Signature Iced Spanish Latte"
             class="sig-img"
             loading="lazy"
@@ -410,333 +393,235 @@
           <div class="section-eyebrow">Our Menu</div>
         </div>
 
-    
-<div
-  class="cat-carousel-3d"
-  id="catCarousel3D"
-  aria-label="Category Navigation"
->
-  <button
-    class="cat-carousel-nav cat-nav-prev"
-    id="catNavPrev"
-    aria-label="Previous Category"
-  >
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-  </button>
+        <!-- 3D Ring / Coverflow Category Carousel -->
+        <div
+          class="cat-carousel-3d"
+          id="catCarousel3D"
+          aria-label="Category Navigation"
+        >
+          <button
+            class="cat-carousel-nav cat-nav-prev"
+            id="catNavPrev"
+            aria-label="Previous Category"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
 
+          <div class="cat-carousel-stage" id="catCarouselStage">
+            <div class="cat-ring-track" id="catRingTrack">
+              <div
+                class="cat-ring-card active"
+                id="tab-coffee"
+                data-tab="coffee"
+                data-index="0"
+              >
+                <div class="cat-glass-badge badge-amber">
+                  <span class="cat-icon">☕</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Hot Coffee</span>
+                  <span class="cat-card-count">17 Items</span>
+                </div>
+              </div>
 
-  <div class="cat-carousel-stage" id="catCarouselStage">
+              <div
+                class="cat-ring-card"
+                id="tab-hot"
+                data-tab="hot"
+                data-index="1"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Hot Drinks</span>
+                  <span class="cat-card-count">12 Items</span>
+                </div>
+              </div>
 
-    <div class="cat-ring-track" id="catRingTrack">
+              <div
+                class="cat-ring-card"
+                id="tab-milkshakes"
+                data-tab="milkshakes"
+                data-index="2"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Milkshakes</span>
+                  <span class="cat-card-count">15 Items</span>
+                </div>
+              </div>
 
-      <!-- 1 -->
-      <div
-        class="cat-ring-card active"
-        id="tab-coffee"
-        data-tab="coffee"
-        data-index="0"
-      >
-        <div class="cat-glass-badge badge-amber">
-          <span class="cat-icon">☕</span>
-        </div>
+              <div
+                class="cat-ring-card"
+                id="tab-frappes"
+                data-tab="frappes"
+                data-index="3"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Frappes</span>
+                  <span class="cat-card-count">4 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-frappuccino"
+                data-tab="frappuccino"
+                data-index="4"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Frappuccino</span>
+                  <span class="cat-card-count">4 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-matcha"
+                data-tab="matcha"
+                data-index="5"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🍵</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Matcha</span>
+                  <span class="cat-card-count">7 Items</span>
+                </div>
+              </div>
 
-        <div class="cat-card-content">
-          <span class="cat-card-title">Hot Coffee</span>
-          <span class="cat-card-count">16 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 2 -->
-      <div
-        class="cat-ring-card"
-        id="tab-hot"
-        data-tab="hot"
-        data-index="1"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Hot Drinks</span>
-          <span class="cat-card-count">12 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 3 -->
-      <div
-        class="cat-ring-card"
-        id="tab-milkshakes"
-        data-tab="milkshakes"
-        data-index="2"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Milkshakes</span>
-          <span class="cat-card-count">15 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 4 -->
-      <div
-        class="cat-ring-card"
-        id="tab-frappes"
-        data-tab="frappes"
-        data-index="3"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Frappes</span>
-          <span class="cat-card-count">4 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 5 -->
-      <div
-        class="cat-ring-card"
-        id="tab-frappuccino"
-        data-tab="frappuccino"
-        data-index="4"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Frappuccino</span>
-          <span class="cat-card-count">4 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 6 -->
-      <div
-        class="cat-ring-card"
-        id="tab-matcha"
-        data-tab="matcha"
-        data-index="5"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🍵</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Matcha</span>
-          <span class="cat-card-count">7 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 7 -->
-      <div
-        class="cat-ring-card"
-        id="tab-boba"
-        data-tab="boba"
-        data-index="6"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🧋</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Boba</span>
-          <span class="cat-card-count">15 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 8 -->
-      <div
-        class="cat-ring-card"
-        id="tab-mojitos"
-        data-tab="mojitos"
-        data-index="7"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🍹</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Mojitos</span>
-          <span class="cat-card-count">12 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 9 -->
-      <div
-        class="cat-ring-card"
-        id="tab-fresh-juices"
-        data-tab="fresh-juices"
-        data-index="8"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🍊</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Fresh Juices</span>
-          <span class="cat-card-count">11 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 10 -->
-      <div
-        class="cat-ring-card"
-        id="tab-ice-latte"
-        data-tab="ice-drinks"
-        data-index="9"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🧊</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Ice Drinks</span>
-          <span class="cat-card-count">7 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 11 -->
-      <div
-        class="cat-ring-card"
-        id="tab-smoothies"
-        data-tab="smoothies"
-        data-index="10"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Smoothies</span>
-          <span class="cat-card-count">10 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 12 -->
-      <div
-        class="cat-ring-card"
-        id="tab-soft-drinks"
-        data-tab="soft-drinks"
-        data-index="11"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🥤</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Soft Drinks</span>
-          <span class="cat-card-count">7 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 13 -->
-      <div
-        class="cat-ring-card"
-        id="tab-desserts"
-        data-tab="desserts"
-        data-index="12"
-      >
-        <div class="cat-glass-badge badge-rose">
-          <span class="cat-icon">🍰</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Desserts</span>
-          <span class="cat-card-count">26 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 14 -->
-      <div
-        class="cat-ring-card"
-        id="tab-specialty-coffee"
-        data-tab="specialty-coffee"
-        data-index="13"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">☕</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Specialty Coffee</span>
-          <span class="cat-card-count">3 Items</span>
-        </div>
-      </div>
-
-
-      <!-- 15 -->
-      <div
-        class="cat-ring-card"
-        id="tab-extra"
-        data-tab="extra"
-        data-index="14"
-      >
-        <div class="cat-glass-badge badge-cyan">
-          <span class="cat-icon">🧁</span>
-        </div>
-
-        <div class="cat-card-content">
-          <span class="cat-card-title">Extras</span>
-          <span class="cat-card-count">7 Items</span>
-        </div>
-      </div>
-
-    </div>
-    <!-- End cat-ring-track -->
-
-  </div>
-  <!-- End cat-carousel-stage -->
-
-
-  <button
-    class="cat-carousel-nav cat-nav-next"
-    id="catNavNext"
-    aria-label="Next Category"
-  >
-    <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <polyline points="9 18 15 12 9 6"></polyline>
-    </svg>
-  </button>
-
-</div>
-
+              <div
+                class="cat-ring-card"
+                id="tab-boba"
+                data-tab="boba"
+                data-index="6"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🧋</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Boba</span>
+                  <span class="cat-card-count">15 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-mojitos"
+                data-tab="mojitos"
+                data-index="7"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🍹</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Mojitos</span>
+                  <span class="cat-card-count">12 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-fresh-juices"
+                data-tab="fresh-juices"
+                data-index="8"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🍊</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Fresh Juices</span>
+                  <span class="cat-card-count">11 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-ice-latte"
+                data-tab="ice-drinks"
+                data-index="9"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🧊</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Ice Drinks</span>
+                  <span class="cat-card-count">7 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-smoothies"
+                data-tab="smoothies"
+                data-index="10"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Smoothies</span>
+                  <span class="cat-card-count">10 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-soft-drinks"
+                data-tab="soft-drinks"
+                data-index="11"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">🥤</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Soft Drinks</span>
+                  <span class="cat-card-count">7 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-desserts"
+                data-tab="desserts"
+                data-index="12"
+              >
+                <div class="cat-glass-badge badge-rose">
+                  <span class="cat-icon">🍰</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Desserts</span>
+                  <span class="cat-card-count">26 Items</span>
+                </div>
+              </div>
+              <div
+                class="cat-ring-card"
+                id="tab-specialty-coffee"
+                data-tab="specialty-coffee"
+                data-index="13"
+              >
+                <div class="cat-glass-badge badge-cyan">
+                  <span class="cat-icon">☕</span>
+                </div>
+                <div class="cat-card-content">
+                  <span class="cat-card-title">Specialty Coffee</span>
+                  <span class="cat-card-count">3 Items</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <button
             class="cat-carousel-nav cat-nav-next"
@@ -1059,6 +944,39 @@
               </div>
               <div class="card-body">
                 <div class="card-name">Flat White</div>
+                <div class="card-tags">
+                  <span class="card-tag">Double Ristretto</span>
+                  <span class="card-tag">Velvety</span>
+                  <span class="card-tag">Intense</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size">Small</span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span>75</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="coffee"
+            >
+              <div class="card-img-wrap">
+                <img
+                  src="hot-americano.jpg"
+                  alt="Hot Americano"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Best Seller</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Hot Americano</div>
                 <div class="card-tags">
                   <span class="card-tag">Double Ristretto</span>
                   <span class="card-tag">Velvety</span>
@@ -2179,7 +2097,10 @@
             <h3 class="panel-head-title"><em>Frappes</em></h3>
           </div>
           <div class="menu-v-grid">
-            <div class="menu-card" data-action="open-category" data-cat="Frappes"
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Frappes"
             >
               <div class="card-img-wrap">
                 <img
@@ -2342,7 +2263,7 @@
             >
               <div class="card-img-wrap">
                 <img
-                  src="caramel-frappuccino.jpg"
+                  src="caramel-frappe.jpg"
                   alt="Caramel Frappuccino"
                   loading="lazy"
                   width="400"
@@ -2501,7 +2422,7 @@
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="iced-matcha.jpg"
+                <img
                   alt="Iced Matcha"
                   loading="lazy"
                   width="400"
@@ -2531,13 +2452,14 @@
               </div>
             </div>
 
+            <!-- 2 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="iced-mango-matcha.jpg"
+                <img
                   alt="Iced Mango Matcha"
                   loading="lazy"
                   width="400"
@@ -2567,14 +2489,15 @@
               </div>
             </div>
 
+            <!-- 3 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="iced-caramel-matcha.jpg"
-                  alt="Iced Caramel Matcha"
+                <img
+                  alt="Mango Matcha"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -2584,11 +2507,11 @@
               </div>
 
               <div class="card-body">
-                <div class="card-name">Iced Caramel Matcha</div>
+                <div class="card-name">Mango Matcha</div>
 
                 <div class="card-tags">
                   <span class="card-tag">Matcha</span>
-                  <span class="card-tag">Caranel</span>
+                  <span class="card-tag">Mango</span>
                   <span class="card-tag">Iced</span>
                 </div>
 
@@ -2596,21 +2519,22 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val">
-                      <span class="price-unit">EGP </span> 113
+                      <span class="price-unit">EGP </span> 115
                     </span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- 4 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="iced-strawberry-matcha.jpg"
-                  alt="Iced Strawberry Matcha"
+                <img
+                  alt="Vanilla Matcha"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -2620,7 +2544,7 @@
               </div>
 
               <div class="card-body">
-                <div class="card-name">Iced Strawberry Matcha</div>
+                <div class="card-name">Vanilla Matcha</div>
 
                 <div class="card-tags">
                   <span class="card-tag">Matcha</span>
@@ -2632,21 +2556,22 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val">
-                      <span class="price-unit">EGP </span> 113
+                      <span class="price-unit">EGP </span> 105
                     </span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- 5 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="iced-coconut-matcha.jpg"
-                  alt="Iced Coconut Matcha"
+                <img
+                  alt="Coconut Matcha"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -2656,7 +2581,7 @@
               </div>
 
               <div class="card-body">
-                <div class="card-name">Iced Coconut Matcha</div>
+                <div class="card-name">Coconut Matcha</div>
 
                 <div class="card-tags">
                   <span class="card-tag">Matcha</span>
@@ -2668,21 +2593,22 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val">
-                      <span class="price-unit">EGP </span> 117
+                      <span class="price-unit">EGP </span> 108
                     </span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- 6 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="hot-matcha.jpg"
-                  alt="Hot Matcha"
+                <img
+                  alt="Chocolate Matcha"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -2692,7 +2618,7 @@
               </div>
 
               <div class="card-body">
-                <div class="card-name">Hot Matcha</div>
+                <div class="card-name">Chocolate Matcha</div>
 
                 <div class="card-tags">
                   <span class="card-tag">Matcha</span>
@@ -2704,21 +2630,22 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val">
-                      <span class="price-unit">EGP </span> 99
+                      <span class="price-unit">EGP </span> 112
                     </span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- 7 -->
             <div
               class="menu-card"
               data-action="open-category"
               data-cat="Matcha"
             >
               <div class="card-img-wrap">
-                <img src="hot-honey-matcha.jpg"
-                  alt="Hot Honey Matcha"
+                <img
+                  alt="Caramel Matcha"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -2728,7 +2655,7 @@
               </div>
 
               <div class="card-body">
-                <div class="card-name">Hot Honey Matcha</div>
+                <div class="card-name">Caramel Matcha</div>
 
                 <div class="card-tags">
                   <span class="card-tag">Matcha</span>
@@ -2740,553 +2667,753 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val">
-                      <span class="price-unit">EGP </span> 104
+                      <span class="price-unit">EGP </span> 110
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-</div>
-</div>
-</div>
-<!-- ── Boba Panel ─────────────────────────────────── -->
-<div class="menu-panel" id="panel-boba">
-  <div class="container">
-    <div class="panel-head">
-      <span class="panel-head-label">Cold Beverages</span>
-      <h3 class="panel-head-title"><em>Boba</em></h3>
-    </div>
 
-    <div class="menu-v-grid">
+            <!-- 8 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Peach Matcha"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
 
-      <!-- 1 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="soft-passion-boba.jpg"
-            alt="Soft Passion Boba"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
+              <div class="card-body">
+                <div class="card-name">Peach Matcha</div>
 
-        <div class="card-body">
-          <div class="card-name">Soft Passion Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Peach</span>
+                  <span class="card-tag">Fresh</span>
+                </div>
 
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Passion Fruit</span>
-            <span class="card-tag">Iced</span>
-          </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 110
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>98
-              </span>
+            <!-- 9 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Blueberry Matcha"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Blueberry Matcha</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Blueberry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 115
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Raspberry Matcha"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Raspberry Matcha</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Raspberry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 115
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Pistachio Matcha"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Pistachio Matcha</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Pistachio</span>
+                  <span class="card-tag">Creamy</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 120
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 12 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Matcha Frappe"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Matcha Frappe</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Blended</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 115
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 13 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Matcha Milkshake"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Matcha Milkshake</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Creamy</span>
+                  <span class="card-tag">Sweet</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 120
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 14 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Matcha Lemonade"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Matcha Lemonade</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Lemon</span>
+                  <span class="card-tag">Refreshing</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 100
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 15 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Matcha"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Matcha Berry"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+
+              <div class="card-body">
+                <div class="card-name">Matcha Berry</div>
+
+                <div class="card-tags">
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Berry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val">
+                      <span class="price-unit">EGP </span> 115
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!-- 2 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="soft-mango-boba.jpg"
-            alt="Soft Mango Boba"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Soft Mango Boba</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Mango</span>
-            <span class="card-tag">Sweet</span>
+      <!-- ── Boba Panel ─────────────────────────────────── -->
+      <div class="menu-panel" id="panel-boba">
+        <div class="container">
+          <div class="panel-head">
+            <span class="panel-head-label">Cold Beverages</span>
+            <h3 class="panel-head-title"><em>Boba</em></h3>
           </div>
 
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>98
-              </span>
+          <div class="menu-v-grid">
+            <!-- 1 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Classic Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Classic Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Milk Tea</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 105</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Brown Sugar Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Brown Sugar Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Brown Sugar</span>
+                  <span class="card-tag">Sweet</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img alt="Taro Boba" loading="lazy" width="400" height="300" />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Taro Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Taro</span>
+                  <span class="card-tag">Creamy</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Strawberry Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Strawberry Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Strawberry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img alt="Mango Boba" loading="lazy" width="400" height="300" />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Mango Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Mango</span>
+                  <span class="card-tag">Fresh</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Passion Fruit Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Passion Fruit Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Passion Fruit</span>
+                  <span class="card-tag">Refreshing</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Blueberry Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Blueberry Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Blueberry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Chocolate Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Chocolate Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Chocolate</span>
+                  <span class="card-tag">Rich</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Vanilla Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Vanilla Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Vanilla</span>
+                  <span class="card-tag">Creamy</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 108</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Caramel Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Caramel Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Caramel</span>
+                  <span class="card-tag">Sweet</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Coconut Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Coconut Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Coconut</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 108</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img alt="Peach Boba" loading="lazy" width="400" height="300" />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Peach Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Peach</span>
+                  <span class="card-tag">Fresh</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Matcha Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Matcha Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Matcha</span>
+                  <span class="card-tag">Creamy</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img
+                  alt="Coffee Boba"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Coffee Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Coffee</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="menu-card" data-action="open-category" data-cat="Boba">
+              <div class="card-img-wrap">
+                <img alt="Berry Boba" loading="lazy" width="400" height="300" />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Berry Boba</div>
+                <div class="card-tags">
+                  <span class="card-tag">Boba</span>
+                  <span class="card-tag">Berry</span>
+                  <span class="card-tag">Iced</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-
-      <!-- 3 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="soft-blueberry-boba.jpg"
-            alt="Soft Blueberry Boba"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Soft Blueberry Boba</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Blueberry</span>
-            <span class="card-tag">Creamy</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>98
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 4 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="soft-pineapple-boba.jpg"
-            alt="Soft Pineapple Boba"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Soft Pineapple Boba</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Pineapple</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>98
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 5 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="soft-strawberry-boba.jpg"
-            alt="Soft Strawberry Boba"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Soft Strawberry Boba</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Strawberry</span>
-            <span class="card-tag">Fresh</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>98
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 6 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="blueberry-boba-milkshake.jpg"
-            alt="Blueberry Boba Milkshake"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Blueberry Boba Milkshake</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Blueberry</span>
-            <span class="card-tag">Refreshing</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>123
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 7 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="mango-boba-milkshake.jpg"
-            alt="Mango Boba Milkshake"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Mango Boba Milkshake</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Mango</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>123
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 8 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="strawberry-boba-milkshake.jpg"
-            alt="Strawberry Boba Milkshake"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Strawberry Boba Milkshake</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Strawberry</span>
-            <span class="card-tag">Rich</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>123
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 9 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="passion-boba-milkshake.jpg"
-            alt="Passion Boba Milkshake"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Passion Boba Milkshake</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Passion Fruit</span>
-            <span class="card-tag">Creamy</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>123
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 10 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="peach-boba-milkshake.jpg"
-            alt="Peach Boba Milkshake"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Peach Boba Milkshake</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Peach</span>
-            <span class="card-tag">Sweet</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>123
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 11 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="mango-boba-smoothie.jpg"
-            alt="Mango Boba Smoothie"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Mango Boba Smoothie</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Mango</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>118
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 12 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="peach-boba-smoothie.jpg"
-            alt="Peach Boba Smoothie"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Peach Boba Smoothie</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Peach</span>
-            <span class="card-tag">Fresh</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>118
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 13 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="strawberry-boba-smoothie.jpg"
-            alt="Strawberry Boba Smoothie"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Strawberry Boba Smoothie</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Strawberry</span>
-            <span class="card-tag">Creamy</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>118
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 14 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="passion-boba-smoothie.jpg"
-            alt="Passion Boba Smoothie"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Passion Boba Smoothie</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Passion Fruit</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>118
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 15 -->
-      <div class="menu-card" data-action="open-category" data-cat="Boba">
-        <div class="card-img-wrap">
-          <img
-            src="blueberry-boba-smoothie.jpg"
-            alt="Blueberry Boba Smoothie"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Blueberry Boba Smoothie</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Boba</span>
-            <span class="card-tag">Blueberry</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-              <span class="price-val">
-                <span class="price-unit">EGP </span>118
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
 
       <!-- ── Mojitos Panel ─────────────────────────────────── -->
       <div class="menu-panel" id="panel-mojitos">
@@ -3304,8 +3431,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="pink-lemonade-mojito.jpg"
-                  alt="Pink Lemonade Mojito"
+                <img
+                  alt="Classic Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3314,7 +3441,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Pink Lemonade Mojito</div>
+                <div class="card-name">Classic Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Mint</span>
                   <span class="card-tag">Lime</span>
@@ -3324,7 +3451,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 85</span
                     >
                   </div>
                 </div>
@@ -3338,8 +3465,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="blue-passion-mojito.jpg"
-                  alt="Blue Passion Mojito"
+                <img
+                  alt="Strawberry Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3348,7 +3475,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Blue Passion Mojito</div>
+                <div class="card-name">Strawberry Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Strawberry</span>
                   <span class="card-tag">Mint</span>
@@ -3358,7 +3485,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3372,8 +3499,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="relief-black-mojito.jpg"
-                  alt="Relief Black Mojito"
+                <img
+                  alt="Blueberry Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3382,7 +3509,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Relief Black Mojito</div>
+                <div class="card-name">Blueberry Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Blueberry</span>
                   <span class="card-tag">Mint</span>
@@ -3392,7 +3519,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3406,8 +3533,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="mixed-berry-mojito.jpg"
-                  alt="Mixed Berry Mojito"
+                <img
+                  alt="Mango Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3416,7 +3543,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Mixed Berry Mojito</div>
+                <div class="card-name">Mango Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Mango</span>
                   <span class="card-tag">Mint</span>
@@ -3426,7 +3553,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3440,8 +3567,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="blueberry-mojito.jpg"
-                  alt="Blueberry Mojito"
+                <img
+                  alt="Passion Fruit Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3450,7 +3577,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Blueberry Mojito</div>
+                <div class="card-name">Passion Fruit Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Passion Fruit</span>
                   <span class="card-tag">Mint</span>
@@ -3460,7 +3587,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -3474,8 +3601,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="passion-fruit-mojito.jpg"
-                  alt="Passion Fruit Mojito"
+                <img
+                  alt="Peach Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3484,7 +3611,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Passion Fruit Mojito</div>
+                <div class="card-name">Peach Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Peach</span>
                   <span class="card-tag">Mint</span>
@@ -3494,7 +3621,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3508,8 +3635,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="pineapple-mojito.jpg"
-                  alt="Pineapple Mojito"
+                <img
+                  alt="Watermelon Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3518,7 +3645,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Pineapple Mojito</div>
+                <div class="card-name">Watermelon Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Watermelon</span>
                   <span class="card-tag">Mint</span>
@@ -3528,7 +3655,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3542,8 +3669,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="strawberry-mojito.jpg"
-                  alt="Strawberry Mojito"
+                <img
+                  alt="Raspberry Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3552,7 +3679,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Strawberry Mojito</div>
+                <div class="card-name">Raspberry Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Raspberry</span>
                   <span class="card-tag">Mint</span>
@@ -3562,7 +3689,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -3576,8 +3703,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="peach-mojito.jpg"
-                  alt="Peach Mojito"
+                <img
+                  alt="Green Apple Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3586,7 +3713,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Peach Mojito</div>
+                <div class="card-name">Green Apple Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Green Apple</span>
                   <span class="card-tag">Mint</span>
@@ -3596,7 +3723,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3610,8 +3737,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="mango-mojito.jpg"
-                  alt="Mango Mojito"
+                <img
+                  alt="Blue Lagoon Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3620,7 +3747,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Mango Mojito</div>
+                <div class="card-name">Blue Lagoon Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Blue Lagoon</span>
                   <span class="card-tag">Mint</span>
@@ -3630,7 +3757,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -3644,8 +3771,8 @@
               data-cat="Mojitos"
             >
               <div class="card-img-wrap">
-                <img src="blue-curacao-mojito.jpg"
-                  alt="Blue Curaçao Mojito"
+                <img
+                  alt="Cherry Mojito"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3654,7 +3781,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Blue Curaçao Mojito</div>
+                <div class="card-name">Cherry Mojito</div>
                 <div class="card-tags">
                   <span class="card-tag">Blue Lagoon</span>
                   <span class="card-tag">Mint</span>
@@ -3664,46 +3791,12 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
               </div>
             </div>
-
-            <div
-              class="menu-card"
-              data-action="open-category"
-              data-cat="Mojitos"
-            >
-              <div class="card-img-wrap">
-                <img src="classic-mojito.jpg"
-                  alt="Classic Mojito"
-                  loading="lazy"
-                  width="400"
-                  height="300"
-                />
-                <div class="card-img-overlay"></div>
-                <div class="card-badge">Signature</div>
-              </div>
-              <div class="card-body">
-                <div class="card-name">Classic Mojito</div>
-                <div class="card-tags">
-                  <span class="card-tag">Blue Lagoon</span>
-                  <span class="card-tag">Mint</span>
-                  <span class="card-tag">Refreshing</span>
-                </div>
-                <div class="card-prices">
-                  <div class="price-col">
-                    <span class="price-size"></span>
-                    <span class="price-val"
-                      ><span class="price-unit">EGP </span> 88</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
@@ -3724,8 +3817,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="mango-juice.jpg"
-                  alt="Mango Juice"
+                <img
+                  alt="Orange Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3734,17 +3827,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Mango Juice</div>
+                <div class="card-name">Orange Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Mango</span>
+                  <span class="card-tag">Orange</span>
                   <span class="card-tag">Citrus</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 78</span
+                      ><span class="price-unit">EGP </span> 75</span
                     >
                   </div>
                 </div>
@@ -3758,8 +3851,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="strawberry-juice.jpg"
-                  alt="Strawberry Juice"
+                <img
+                  alt="Lemon Mint Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3768,17 +3861,17 @@
                 <div class="card-badge">Popular</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Strawberry Juice</div>
+                <div class="card-name">Lemon Mint Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Strawberry</span>
+                  <span class="card-tag">Lemon</span>
                   <span class="card-tag">Refreshing</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 78</span
+                      ><span class="price-unit">EGP </span> 70</span
                     >
                   </div>
                 </div>
@@ -3792,8 +3885,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="kiwi-juice.jpg"
-                  alt="Kiwi Juice"
+                <img
+                  alt="Mango Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3802,17 +3895,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Kiwi Juice</div>
+                <div class="card-name">Mango Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Kiwi</span>
+                  <span class="card-tag">Mango</span>
                   <span class="card-tag">Thick</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 98</span
+                      ><span class="price-unit">EGP </span> 90</span
                     >
                   </div>
                 </div>
@@ -3826,8 +3919,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="cantaloupe-&-vanilla-juice.jpg"
-                  alt="Cantaloupe & Vanilla Juice"
+                <img
+                  alt="Strawberry Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3836,17 +3929,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Cantaloupe & Vanilla Juice</div>
+                <div class="card-name">Strawberry Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Cantaloupe</span>
+                  <span class="card-tag">Strawberry</span>
                   <span class="card-tag">Sweet</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 98</span
+                      ><span class="price-unit">EGP </span> 85</span
                     >
                   </div>
                 </div>
@@ -3860,8 +3953,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="banana-milk-juice.jpg"
-                  alt="Banana Milk Juice"
+                <img
+                  alt="Guava Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3870,17 +3963,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Banana Milk Juice</div>
+                <div class="card-name">Guava Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Banana</span>
+                  <span class="card-tag">Guava</span>
                   <span class="card-tag">Smooth</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 78</span
+                      ><span class="price-unit">EGP </span> 75</span
                     >
                   </div>
                 </div>
@@ -3894,7 +3987,7 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="watermelon-juice.jpg"
+                <img
                   alt="Watermelon Juice"
                   loading="lazy"
                   width="400"
@@ -3914,7 +4007,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 78</span
+                      ><span class="price-unit">EGP </span> 80</span
                     >
                   </div>
                 </div>
@@ -3928,8 +4021,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="watermelon-&-vanilla-juice.jpg"
-                  alt="Watermelon & Vanilla Juice"
+                <img
+                  alt="Pineapple Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -3938,17 +4031,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Watermelon & Vanilla Juice</div>
+                <div class="card-name">Pineapple Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Watermelon</span>
+                  <span class="card-tag">Pineapple</span>
                   <span class="card-tag">Tropical</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 93</span
+                      ><span class="price-unit">EGP </span> 90</span
                     >
                   </div>
                 </div>
@@ -3962,22 +4055,22 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="lemon-juice.jpg" alt="Lemon Juice" loading="lazy" width="400" height="300" />
+                <img alt="Kiwi Juice" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Lemon Juice</div>
+                <div class="card-name">Kiwi Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Lemon</span>
+                  <span class="card-tag">Kiwi</span>
                   <span class="card-tag">Zesty</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 68</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -3991,8 +4084,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="lemon-mint-juice.jpg"
-                  alt="Lemon Mint Juice"
+                <img
+                  alt="Avocado Honey Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4001,17 +4094,17 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Lemon Mint Juice</div>
+                <div class="card-name">Avocado Honey Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Lemon</span>
+                  <span class="card-tag">Avocado</span>
                   <span class="card-tag">Rich</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 78</span
+                      ><span class="price-unit">EGP </span> 110</span
                     >
                   </div>
                 </div>
@@ -4025,8 +4118,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="dates-&-mixed-nuts-juice.jpg"
-                  alt="Dates & Mixed Nuts Juice"
+                <img
+                  alt="Cocktail Blast"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4035,17 +4128,17 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Dates & Mixed Nuts Juice</div>
+                <div class="card-name">Cocktail Blast</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Mixed Nuts</span>
+                  <span class="card-tag">Mixed Fruit</span>
                   <span class="card-tag">Special</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 108</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -4059,8 +4152,8 @@
               data-cat="Fresh Juices"
             >
               <div class="card-img-wrap">
-                <img src="avocado-juice.jpg"
-                  alt="Avocado Juice"
+                <img
+                  alt="Pomegranate Juice"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4069,17 +4162,17 @@
                 <div class="card-badge">Fresh</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Avocado Juice</div>
+                <div class="card-name">Pomegranate Juice</div>
                 <div class="card-tags">
                   <span class="card-tag">Juice</span>
-                  <span class="card-tag">Avocado</span>
+                  <span class="card-tag">Pomegranate</span>
                   <span class="card-tag">Pure</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 153</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -4105,7 +4198,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-americano.jpg"
+                <img
                   alt="Iced Americano"
                   loading="lazy"
                   width="400"
@@ -4125,7 +4218,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 79</span
+                      ><span class="price-unit">EGP </span> 65</span
                     >
                   </div>
                 </div>
@@ -4139,7 +4232,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-latte.jpg" alt="Iced Latte" loading="lazy" width="400" height="300" />
+                <img alt="Iced Latte" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Signature</div>
               </div>
@@ -4154,7 +4247,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 93</span
+                      ><span class="price-unit">EGP </span> 85</span
                     >
                   </div>
                 </div>
@@ -4168,7 +4261,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-spanish-latte.jpg"
+                <img
                   alt="Iced Spanish Latte"
                   loading="lazy"
                   width="400"
@@ -4188,7 +4281,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 103</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -4202,7 +4295,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-mocha.jpg" alt="Iced Mocha" loading="lazy" width="400" height="300" />
+                <img alt="Iced Mocha" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Signature</div>
               </div>
@@ -4217,7 +4310,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 98</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -4231,7 +4324,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-caramel-macchiato.jpg"
+                <img
                   alt="Iced Caramel Macchiato"
                   loading="lazy"
                   width="400"
@@ -4265,7 +4358,7 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-white-mocha.jpg"
+                <img
                   alt="Iced White Mocha"
                   loading="lazy"
                   width="400"
@@ -4285,7 +4378,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 98</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -4299,12 +4392,12 @@
               data-cat="Ice Drinks"
             >
               <div class="card-img-wrap">
-                <img src="iced-tapioca-coffee.jpg" alt="Iced Tapioca Coffee" loading="lazy" width="400" height="300" />
+                <img alt="Cold Brew" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Specialty</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Iced Tapioca Coffee</div>
+                <div class="card-name">Cold Brew</div>
                 <div class="card-tags">
                   <span class="card-tag">Coffee</span>
                   <span class="card-tag">Smooth</span>
@@ -4314,7 +4407,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 98</span
+                      ><span class="price-unit">EGP </span> 80</span
                     >
                   </div>
                 </div>
@@ -4340,8 +4433,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="strawberry-smoothie.jpg"
-                  alt="Strawberry Smoothie"
+                <img
+                  alt="Strawberry Banana Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4350,7 +4443,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Strawberry Smoothie</div>
+                <div class="card-name">Strawberry Banana Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Strawberry</span>
@@ -4360,7 +4453,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -4374,8 +4467,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="kiwi-smoothie.jpg"
-                  alt="Kiwi Smoothie"
+                <img
+                  alt="Mango Passion Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4384,7 +4477,7 @@
                 <div class="card-badge">Tropical</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Kiwi Smoothie</div>
+                <div class="card-name">Mango Passion Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Mango</span>
@@ -4394,7 +4487,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 105</span
                     >
                   </div>
                 </div>
@@ -4408,8 +4501,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="pineapple-smoothie.jpg"
-                  alt="Pineapple Smoothie"
+                <img
+                  alt="Berry Blast Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4418,7 +4511,7 @@
                 <div class="card-badge">Popular</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Pineapple Smoothie</div>
+                <div class="card-name">Berry Blast Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Mixed Berries</span>
@@ -4428,7 +4521,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 110</span
                     >
                   </div>
                 </div>
@@ -4442,8 +4535,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="mango-smoothie.jpg"
-                  alt="Mango Smoothie"
+                <img
+                  alt="Green Glow Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4452,7 +4545,7 @@
                 <div class="card-badge">Healthy</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Mango Smoothie</div>
+                <div class="card-name">Green Glow Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Spinach</span>
@@ -4462,7 +4555,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -4476,8 +4569,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="peach-smoothie.jpg"
-                  alt="Peach Smoothie"
+                <img
+                  alt="Pina Colada Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4486,7 +4579,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Peach Smoothie</div>
+                <div class="card-name">Pina Colada Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Pineapple</span>
@@ -4496,7 +4589,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 105</span
                     >
                   </div>
                 </div>
@@ -4510,8 +4603,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="blueberry-smoothie.jpg"
-                  alt="Blueberry Smoothie"
+                <img
+                  alt="Peach Paradise Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4520,7 +4613,7 @@
                 <div class="card-badge">Refreshing</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Blueberry Smoothie</div>
+                <div class="card-name">Peach Paradise Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Peach</span>
@@ -4530,7 +4623,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 95</span
                     >
                   </div>
                 </div>
@@ -4544,8 +4637,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="mixed-berry-smoothie.jpg"
-                  alt="Mixed Berry Smoothie"
+                <img
+                  alt="Chocolate Peanut Butter Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4554,7 +4647,7 @@
                 <div class="card-badge">Rich</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Mixed Berry Smoothie</div>
+                <div class="card-name">Chocolate Peanut Butter Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Peanut Butter</span>
@@ -4564,7 +4657,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 115</span
                     >
                   </div>
                 </div>
@@ -4578,8 +4671,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="green-apple-smoothie.jpg"
-                  alt="Green Apple Smoothie"
+                <img
+                  alt="Avocado Power Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4588,7 +4681,7 @@
                 <div class="card-badge">Signature</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Green Apple Smoothie</div>
+                <div class="card-name">Avocado Power Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Avocado</span>
@@ -4598,7 +4691,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 120</span
                     >
                   </div>
                 </div>
@@ -4612,8 +4705,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="passion-fruit-smoothie.jpg"
-                  alt="Passion Fruit Smoothie"
+                <img
+                  alt="Kiwi Splash Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4622,7 +4715,7 @@
                 <div class="card-badge">Zesty</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Passion Fruit Smoothie</div>
+                <div class="card-name">Kiwi Splash Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Kiwi</span>
@@ -4632,7 +4725,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 100</span
                     >
                   </div>
                 </div>
@@ -4646,8 +4739,8 @@
               data-cat="Smoothies"
             >
               <div class="card-img-wrap">
-                <img src="lemon-mint-smoothie.jpg"
-                  alt="Lemon Mint Smoothie"
+                <img
+                  alt="Vanilla Coffee Smoothie"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4656,7 +4749,7 @@
                 <div class="card-badge">Special</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Lemon Mint Smoothie</div>
+                <div class="card-name">Vanilla Coffee Smoothie</div>
                 <div class="card-tags">
                   <span class="card-tag">Smoothie</span>
                   <span class="card-tag">Coffee</span>
@@ -4666,7 +4759,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 87</span
+                      ><span class="price-unit">EGP </span> 105</span
                     >
                   </div>
                 </div>
@@ -4676,7 +4769,357 @@
         </div>
       </div>
 
+      <!-- ── Smoothies Panel ────────────────────────────── -->
+      <div class="menu-panel" id="panel-smoothies">
+        <div class="container">
+          <div class="panel-head">
+            <span class="panel-head-label">Cold Beverages</span>
+            <h3 class="panel-head-title"><em>Smoothies</em></h3>
+          </div>
 
+          <div class="menu-v-grid">
+            <!-- 1 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Strawberry Banana Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Strawberry Banana Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Strawberry</span>
+                  <span class="card-tag">Banana</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 95</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Mango Passion Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Tropical</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Mango Passion Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Mango</span>
+                  <span class="card-tag">Passion Fruit</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 105</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Berry Blast Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Popular</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Berry Blast Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Mixed Berries</span>
+                  <span class="card-tag">Antioxidant</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 110</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Green Glow Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Healthy</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Green Glow Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Spinach</span>
+                  <span class="card-tag">Green Apple</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 100</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Pina Colada Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Pina Colada Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Pineapple</span>
+                  <span class="card-tag">Coconut</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 105</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Peach Paradise Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Refreshing</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Peach Paradise Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Peach</span>
+                  <span class="card-tag">Yogurt</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 95</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Chocolate Peanut Butter Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Rich</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Chocolate Peanut Butter Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Peanut Butter</span>
+                  <span class="card-tag">Chocolate</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 115</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Avocado Power Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Signature</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Avocado Power Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Avocado</span>
+                  <span class="card-tag">Honey</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 120</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Kiwi Splash Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Zesty</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Kiwi Splash Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Kiwi</span>
+                  <span class="card-tag">Mint</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 100</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div
+              class="menu-card"
+              data-action="open-category"
+              data-cat="Smoothies"
+            >
+              <div class="card-img-wrap">
+                <img
+                  alt="Vanilla Coffee Smoothie"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="card-img-overlay"></div>
+                <div class="card-badge">Special</div>
+              </div>
+              <div class="card-body">
+                <div class="card-name">Vanilla Coffee Smoothie</div>
+                <div class="card-tags">
+                  <span class="card-tag">Smoothie</span>
+                  <span class="card-tag">Coffee</span>
+                  <span class="card-tag">Vanilla</span>
+                </div>
+                <div class="card-prices">
+                  <div class="price-col">
+                    <span class="price-size"></span>
+                    <span class="price-val"
+                      ><span class="price-unit">EGP </span> 105</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- ── Soft Drinks Panel ──────────────────────────── -->
       <div class="menu-panel" id="panel-soft-drinks">
@@ -4693,13 +5136,13 @@
               data-action="open-category"
               data-cat="Soft Drinks"
             >
-              <div  class="card-img-wrap">
-                <img src="pepsi-cola.jpg" alt="Pepi Cola" loading="lazy" width="400" height="300" />
+              <div class="card-img-wrap">
+                <img alt="Coca Cola" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Popular</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Pepi Cola</div>
+                <div class="card-name">Coca Cola</div>
                 <div class="card-tags">
                   <span class="card-tag">Soft Drink</span>
                   <span class="card-tag">Cola</span>
@@ -4709,7 +5152,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 40</span
+                      ><span class="price-unit">EGP </span> 45</span
                     >
                   </div>
                 </div>
@@ -4723,12 +5166,12 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="7up.jpg" alt="7Up" loading="lazy" width="400" height="300" />
+                <img alt="Sprite" loading="lazy" width="400" height="300" />
                 <div class="card-img-overlay"></div>
                 <div class="card-badge">Refreshing</div>
               </div>
               <div class="card-body">
-                <div class="card-name">7Up</div>
+                <div class="card-name">Sprite</div>
                 <div class="card-tags">
                   <span class="card-tag">Soft Drink</span>
                   <span class="card-tag">Lemon</span>
@@ -4738,7 +5181,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 40</span
+                      ><span class="price-unit">EGP </span> 45</span
                     >
                   </div>
                 </div>
@@ -4752,8 +5195,8 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="twist.jpg"
-                  alt="Twist"
+                <img
+                  alt="Fanta Orange"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4762,17 +5205,17 @@
                 <div class="card-badge">Fruity</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Twist</div>
+                <div class="card-name">Fanta Orange</div>
                 <div class="card-tags">
                   <span class="card-tag">Soft Drink</span>
-                  <span class="card-tag">Energy</span>
+                  <span class="card-tag">Orange</span>
                   <span class="card-tag">Sweet</span>
                 </div>
                 <div class="card-prices">
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 40</span
+                      ><span class="price-unit">EGP </span> 45</span
                     >
                   </div>
                 </div>
@@ -4786,8 +5229,8 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="schweppes.jpg"
-                  alt="Schweppes"
+                <img
+                  alt="Red Bull Energy Drink"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4796,7 +5239,7 @@
                 <div class="card-badge">Energy</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Schweppes</div>
+                <div class="card-name">Red Bull Energy Drink</div>
                 <div class="card-tags">
                   <span class="card-tag">Energy</span>
                   <span class="card-tag">Boost</span>
@@ -4806,7 +5249,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 40</span
+                      ><span class="price-unit">EGP </span> 85</span
                     >
                   </div>
                 </div>
@@ -4820,8 +5263,8 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="red-bull.jpg"
-                  alt="Red Bull"
+                <img
+                  alt="Schweppes Tonic"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4830,7 +5273,7 @@
                 <div class="card-badge">Mixer</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Red Bull </div>
+                <div class="card-name">Schweppes Tonic</div>
                 <div class="card-tags">
                   <span class="card-tag">Soft Drink</span>
                   <span class="card-tag">Tonic</span>
@@ -4840,7 +5283,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 85</span
+                      ><span class="price-unit">EGP </span> 50</span
                     >
                   </div>
                 </div>
@@ -4854,8 +5297,8 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="monster-energy.jpg"
-                  alt="Monster Energy"
+                <img
+                  alt="Birell Malt Drink"
                   loading="lazy"
                   width="400"
                   height="300"
@@ -4864,7 +5307,7 @@
                 <div class="card-badge">Non-Alcoholic</div>
               </div>
               <div class="card-body">
-                <div class="card-name">Monster Energy</div>
+                <div class="card-name">Birell Malt Drink</div>
                 <div class="card-tags">
                   <span class="card-tag">Malt</span>
                   <span class="card-tag">Refreshing</span>
@@ -4874,7 +5317,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 85</span
+                      ><span class="price-unit">EGP </span> 55</span
                     >
                   </div>
                 </div>
@@ -4888,7 +5331,7 @@
               data-cat="Soft Drinks"
             >
               <div class="card-img-wrap">
-                <img src="mineral-water.jpg"
+                <img
                   alt="Mineral Water"
                   loading="lazy"
                   width="400"
@@ -4908,7 +5351,7 @@
                   <div class="price-col">
                     <span class="price-size"></span>
                     <span class="price-val"
-                      ><span class="price-unit">EGP </span> 15</span
+                      ><span class="price-unit">EGP </span> 25</span
                     >
                   </div>
                 </div>
@@ -5062,263 +5505,6 @@
           </div>
         </div>
       </div>
-
-<!-- ── Specialty Coffee Panel ───────────────────── -->
-<div class="menu-panel" id="panel-specialty-coffee">
-  <div class="container">
-
-    <div class="panel-head">
-      <span class="panel-head-label">Premium Coffee</span>
-      <h3 class="panel-head-title"><em>Specialty Coffee</em></h3>
-    </div>
-
-    <div class="menu-v-grid">
-
-      <!-- 1 -->
-      <div
-        class="menu-card"
-        data-action="open-category"
-        data-cat="Specialty Coffee"
-      >
-        <div class="card-img-wrap">
-          <img
-            src="hot-v60.jpg"
-            alt="Hot V60"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Signature</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Hot V60</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Specialty Coffee</span>
-            <span class="card-tag">V60</span>
-            <span class="card-tag">Hot</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-
-              <span class="price-val">
-                <span class="price-unit">EGP </span>128
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 2 -->
-      <div
-        class="menu-card"
-        data-action="open-category"
-        data-cat="Specialty Coffee"
-      >
-        <div class="card-img-wrap">
-          <img
-            src="iced-v60.jpg"
-            alt="Iced V60"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Refreshing</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Iced V60</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Specialty Coffee</span>
-            <span class="card-tag">V60</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-
-              <span class="price-val">
-                <span class="price-unit">EGP </span>138
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- 3 -->
-      <div
-        class="menu-card"
-        data-action="open-category"
-        data-cat="Specialty Coffee"
-      >
-        <div class="card-img-wrap">
-          <img
-            src="cold-brew.jpg"
-            alt="Cold Brew"
-            loading="lazy"
-            width="400"
-            height="300"
-          />
-
-          <div class="card-img-overlay"></div>
-          <div class="card-badge">Cold Brew</div>
-        </div>
-
-        <div class="card-body">
-          <div class="card-name">Cold Brew</div>
-
-          <div class="card-tags">
-            <span class="card-tag">Specialty Coffee</span>
-            <span class="card-tag">Cold Brew</span>
-            <span class="card-tag">Iced</span>
-          </div>
-
-          <div class="card-prices">
-            <div class="price-col">
-              <span class="price-size"></span>
-
-              <span class="price-val">
-                <span class="price-unit">EGP </span>173
-              </span>
-            </div>
-          </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-       
-<!-- ── Extras Panel ─────────────────────────────── -->
-<div class="menu-panel" id="panel-extra">
-  <div class="container">
-
-    <div class="panel-head">
-      <span class="panel-head-label">Add Something Extra</span>
-      <h3 class="panel-head-title"><em>Extras</em></h3>
-    </div>
-
-    <div class="extras-list">
-
-      <!-- 1 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Boba Pearls</div>
-          <div class="extra-description">
-            Add extra tapioca pearls
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>35
-        </div>
-      </div>
-
-
-      <!-- 2 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Extra Espresso</div>
-          <div class="extra-description">
-            Add an extra shot of espresso
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>45
-        </div>
-      </div>
-
-
-      <!-- 3 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Ice Cream Scoop</div>
-          <div class="extra-description">
-            Add a scoop of ice cream
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>30
-        </div>
-      </div>
-
-
-      <!-- 4 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Honey</div>
-          <div class="extra-description">
-            Add natural honey
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>25
-        </div>
-      </div>
-
-
-      <!-- 5 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Flavor Syrup</div>
-          <div class="extra-description">
-            Add your favorite syrup flavor
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>35
-        </div>
-      </div>
-
-
-      <!-- 6 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Whipped Cream</div>
-          <div class="extra-description">
-            Add creamy whipped topping
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>35
-        </div>
-      </div>
-
-
-      <!-- 7 -->
-      <div class="extra-item">
-        <div class="extra-info">
-          <div class="extra-name">Mixed Nuts</div>
-          <div class="extra-description">
-            Add a crunchy mixed nuts topping
-          </div>
-        </div>
-
-        <div class="extra-price">
-          <span class="price-unit">EGP </span>35
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
     </section>
 
     <!-- ═══════════════════════════ PARALLAX BANNER ═════════════ -->
@@ -5327,8 +5513,10 @@
       <div class="pb-overlay"></div>
       <div class="pb-content reveal-s">
         <p class="pb-quote">
+          "Every cup we serve is a small act of love — brewed with intention,
+          poured with care."
         </p>
-        <p class="pb-attr"></p>
+        <p class="pb-attr">— The Relief Team</p>
       </div>
     </div>
 
@@ -5397,6 +5585,27 @@
         <div class="page-end-logo">R E L I E F</div>
         <div class="page-end-rule"></div>
         <p class="page-end-copy">© 2026 Relief Cafe. All rights reserved.</p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ FLOATING SOCIAL DOCK ══════════════════ -->
+    <div class="social-dock" id="socialDock" aria-label="Relief social links">
+      <div class="dock-glass-wrap">
+        <div class="dock-brand">
+          <span class="dock-logo">RELIEF</span>
+          <span class="dock-dot"></span>
+        </div>
+        <div class="dock-divider"></div>
+        <div class="dock-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="dock-tooltip">Instagram</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="dock-icon-btn" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+            <span class="dock-tooltip">TikTok</span>
+          </a>
+        </div>
       </div>
     </div>
 
